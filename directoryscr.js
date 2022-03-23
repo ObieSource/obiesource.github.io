@@ -1,5 +1,3 @@
-console.log("yo");
-
 function populateOfficersOrMembers(membs, target){
     for (var j = 0; j < membs.length; j++){
         var mem = membs[j];
@@ -17,8 +15,6 @@ function onGet(result){
     var members = result["members"];
     populateOfficersOrMembers(officers, "div.offend");
     populateOfficersOrMembers(members, "div.dirend");
-    console.log(officers, members);
-
 }
 
 $.get(
