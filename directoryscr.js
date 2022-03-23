@@ -1,6 +1,6 @@
 console.log("yo");
 
-function dostuff(membs, target){
+function populateOfficersOrMembers(membs, target){
     for (var j = 0; j < membs.length; j++){
         var mem = membs[j];
         var cell = $("<a>")
@@ -15,8 +15,8 @@ function dostuff(membs, target){
 function onGet(result){
     var officers = result["officers"];
     var members = result["members"];
-    dostuff(officers, "div.offend");
-    dostuff(members, "div.dirend");
+    populateOfficersOrMembers(officers, "div.offend");
+    populateOfficersOrMembers(members, "div.dirend");
     console.log(officers, members);
 
 }
