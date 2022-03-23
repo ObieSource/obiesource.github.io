@@ -1,11 +1,11 @@
-// Code to get params from
-// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/901144#901144
+// get param "name"
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("name");
 
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-
-const id = params.name;
+function on404(result){
+    // pronouns
+    $("h3.memberprons").text("404 user not found");
+}
 
 function onGet(result){
 
@@ -44,9 +44,13 @@ function onGet(result){
     }
 }
 
-$.get(
-    URL="/members/" + id + ".json",
-    onGet,
-    dataType="json"
-);
+$.ajax({
+    type: "GET",
+    url: "/members/" + id + ".json",
+    statusCode: {
+        200: onGet,
+        404: on404
+    },
+    dataType:"json"
+});
 
