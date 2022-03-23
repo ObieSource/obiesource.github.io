@@ -15,7 +15,7 @@ function dostuff(membs, target){
 function onGet(result){
     var officers = result["officers"];
     var members = result["members"];
-    dostuff(officers, "h3.dirmem");
+    dostuff(officers, "div.offend");
     dostuff(members, "div.dirend");
     console.log(officers, members);
 

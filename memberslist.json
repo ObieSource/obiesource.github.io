@@ -1,5 +1,6 @@
 {
     "officers": [
+        {"name": "super Rehwinkel", "href": "/member.html?name=rehwinkel"}
     ],
     "members": [
         {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"}
