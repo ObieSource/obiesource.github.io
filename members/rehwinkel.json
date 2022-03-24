@@ -1,0 +1,20 @@
+{
+    "name": "William Rehwinkel",
+    "pronouns": "he/him/his",
+    "class": "'24",
+    "socials": [
+        "https://www.facebook.com/william.rehwinkel.58",
+        "https://koyu.space/@fiskfan1999",
+        "https://www.instagram.com/fiskfan1999/",
+        "https://www.youtube.com/channel/UCPnda1E2qCD7lA1XvDs7Xvg",
+        "https://video.ploud.jp/c/william_rehwinkel_pipe_organ/videos"
+    ],
+    "bio": "Hello! I'm a 3rd year double-degree student majoring in Computer Science and the Pipe Organ. I am from the New York/New Jersey area. In addition to computer programming my passion is playing the organ, and I operate a Youtube channel where I upload recordings of the organs here on campus! My most favorite thing about programming is web-design, and have recently got into static website hosting using javascript! If you would like to learn more about the organ, feel free to follow my Instagram page (@FiskFan1999), where I post memes and other funny content about the pipe organ and early music.",
+    "projects": [
+        {
+            "name": "wvlist",
+            "description": "Catalogue of compositions with community submissions",
+            "website": "https://wvlist.net"
+        }
+    ]
+}
