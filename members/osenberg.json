@@ -1,0 +1,18 @@
+{
+	"name": "Ike Osenberg",
+	"pronouns": "he/him/his or they/them/theirs",
+	"class": "'23",
+	"bio": "Hi! I'm from just North of Philadelphia, I'm a 3rd year Computer Science and Musical Studies major, and Linguistics minor, and I'm a leader of Oberlin Open Source! I'm working on a few long term projects right now, including a Workchart generator for my dining co-op (Pyle) and a structure-overhaul mod for Minecraft. I also teach ToadsCo, an ExCo about herpetology, and I work as an RA in Burton and as a technology consultant at the CIT Help Desk."
+	"projects": [
+		{
+			"name": "Workchart Generator",
+			"description": "Builds a workchart off of a set of co-opers and availabilites read from a Google Form",
+			"website": "https://github.com/iosenberg/WorkchartGenerator"
+		},
+		{
+			"name": "The Polis Project",
+			"description": "A Minecraft Mod which adds more and more complex populated structures, as well as roads spanning the world which connect structures."
+			"website": "https://github.com/iosenberg/PolisProject"
+		}
+	]
+}
