@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       
-    - name: Linter
+    - name: htmlLimt
       # https://github.com/htmlhint/HTMLHint
-      run: npx htmlhint -r "tagname-lowercase,attr-lowercase,attr-value-double-quotes,doctype-first,doctype-html5,tag-pair,spec-char-escape,id-unique,src-not-empty,attr-no-duplication,title-require,attr-unsafe-chars,href-abs-or-rel,html-lang-require,id-unique,input-requires-label,tag-pair,tagname-lowercase,tagname-specialchars,tags-check,attr-no-unnecessary-whitespace,empty-tag-not-self-closed"
+      run: make lint
