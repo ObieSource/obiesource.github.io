@@ -32,6 +32,11 @@ MEMBERS_REQUIRED = {
         "bio": "",
         "projects": list()
         }
+PROJECTS_REQUIRED = {
+        "name": "",
+        "description": "",
+        "website": ""
+        }
 
 def lintJson(filename):
     print("Checking file " + filename)
@@ -58,10 +63,27 @@ def lintJson(filename):
                 if k not in MEMBERS_REQUIRED:
                     print("Key " + k + " in members JSON file is not required by website.")
                     failed = True
+            # check for types in ["socials"]
+            l = js["socials"]
+            for item in l:
+                if type(item) != type(""):
+                    print("A value in socials is not a string.", type(item), type(""))
+                    failed = True
 
-
-                
-
+            # check for correct types of "projects"
+            p = js["projects"]
+            for item in p:
+                for k in PROJECTS_REQUIRED:
+                    if k not in item:
+                        print("Key " + k + " not in a project dictionary.", item)
+                        failed = True
+                    elif type(PROJECTS_REQUIRED[k]) != type(item[k]):
+                        print("Value for key " + k + " has incorrect type. Got", type(item[k]), "got", type(PROJECTS_REQUIRED[k]))
+                        failed = True
+                for k in item:
+                    if k not in PROJECTS_REQUIRED:
+                        print("Key", k, "is included, but not required.")
+                        failed = True
     return failed
 
 if __name__ == "__main__":
