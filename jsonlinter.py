@@ -24,14 +24,14 @@ def getJsonFiles():
             jsonFiles.append(name)
     return jsonFiles
 
-REQUIRED_KEYS = (
-        "name",
-        "pronouns",
-        "class",
-        "socials",
-        "bio",
-        "projects"
-        )
+MEMBERS_REQUIRED = {
+        "name": "",
+        "pronouns": "",
+        "class": "",
+        "socials": list(),
+        "bio": "",
+        "projects": list()
+        }
 
 def lintJson(filename):
     print("Checking file " + filename)
@@ -45,15 +45,21 @@ def lintJson(filename):
         failed = False
         if filename.startswith("./members/"):
             # check for required keys
-            for k in REQUIRED_KEYS:
+            for k in MEMBERS_REQUIRED:
+                t = MEMBERS_REQUIRED[k]
                 if k not in js:
                     print("Key " + k + " required but not found in members JSON file.")
                     failed = True
+                elif type(js[k]) != type(t):
+                    print("Key " + k + " has incorrect type " + str(type(js[k])) + ", needs " + str(type(t)))
+                    failed=True
             # check for any keys in members 
             for k in js:
-                if k not in REQUIRED_KEYS:
+                if k not in MEMBERS_REQUIRED:
                     print("Key " + k + " in members JSON file is not required by website.")
                     failed = True
+
+
                 
 
     return failed
