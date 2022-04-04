@@ -27,4 +27,4 @@ jobs:
 #        pip install flake8 pytest
 #        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Json Linter
-        run: python jsonlinter.py
+      run: python jsonlinter.py
