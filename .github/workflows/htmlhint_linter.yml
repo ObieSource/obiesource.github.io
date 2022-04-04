@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       
-    - name: htmlLimt
+    - name: htmlLint
       # https://github.com/htmlhint/HTMLHint
       run: make lint
