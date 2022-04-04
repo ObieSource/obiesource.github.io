@@ -25,10 +25,11 @@ def getJsonFiles():
     return jsonFiles
 
 def lintJson(filename):
+    print("Checking file " + filename)
     with open(filename) as file:
         try: json.load(file)
         except Exception as e:
-            print("Error while parsing " + file)
+            print("Error while parsing " + filename)
             traceback.print_tb(e)
     return False
 
