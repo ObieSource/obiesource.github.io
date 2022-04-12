@@ -23,8 +23,8 @@ At the top of this page is a "fork" button. Click this button to make a personal
 	> git clone {the-link-you-copied}
 6. Make a new branch (optional):
 	- enter the following commands:
-	`> git branch new-member
-	> git checkout new-member`
+	> git branch new-member  
+	> git checkout new-member
 
 ## Step 4: Make changes:
 
@@ -40,7 +40,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following command:
-	`> python3 -m http.server --bind 127.0.0.1 8000`
+	> python3 -m http.server --bind 127.0.0.1 8000
 3. In your favorite web browser, navigate to http://127.0.0.1:8000/member.html?name={your-last-name}
 4. You should see a page with all your information on it!
 	- If you see an error message, try to fix the error in members/{your-last-name}.json
@@ -50,9 +50,9 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following commands:
-	`> git add members/{your-last-name}.json memberslist.json
-	> git commit -m "Adding myself to the members list"
-	> git push`
+	> git add members/{your-last-name}.json memberslist.json  
+	> git commit -m "Adding myself to the members list"  
+	> git push
 
 ## Step 7: Make a pull request
 
