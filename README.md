@@ -60,5 +60,5 @@ A pull request is a request to have the changes from your forked repository adde
 1. Open your forked repository in github.
 2. Above your files should be a message that says "This branch is 1 commit ahead of ObieSource/obiesource.github.io:main."
 	- If the message says "This branch is X commits _behind_ ObieSource/...:main", click Fetch Upstream > Fetch and Merge
-3. Click Contribute > Open pull request > Open pull request
+3. Click Contribute > Open pull request > Create pull request
 4. Now just wait! We'll review the additions and either give you feedback or accept the request!
