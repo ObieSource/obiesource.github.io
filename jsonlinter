@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+
+# json linter
+# William Rehwinkel / obiesource, 2022
+
+import sys
+import os
+import json
+import traceback
+from glob import glob
+
+def get_json_files():
+    return glob("./**/*.json", recursive=True)
+
+MEMBERS_REQUIRED = {
+        "name": "",
+        "pronouns": "",
+        "class": "",
+        "socials": list(),
+        "bio": "",
+        "projects": list()
+        }
+PROJECTS_REQUIRED = {
+        "name": "",
+        "description": "",
+        "website": ""
+        }
+
+def lint_json(filename):
+    print("Checking file " + filename)
+    with open(filename) as file:
+        try: js = json.load(file)
+        except Exception as e:
+            print("Error while parsing " + filename)
+            traceback.print_tb(e)
+            return True
+
+        failed = False
+        if filename.startswith("./members/"):
+            for k, v in MEMBERS_REQUIRED.items():
+                # note: doesn't check for required keys anymore
+
+                t = type(v)
+                if k in js and type(js[k]) != t:
+                    print("Key " + k + " has incorrect type " + str(type(js[k])) + ", needs " + str(t))
+                    failed=True
+            # check for any keys in members
+            for k in js:
+                if k not in MEMBERS_REQUIRED:
+                    print("Extraneous key " + k + " found in members JSON file.")
+                    failed = True
+
+            # check for types in ["socials"]
+            if "socials" in js:
+                l = js["socials"]
+                for item in l:
+                    if type(item) != type(""):
+                        print("A value in socials is not a string.", type(item), type(""))
+                        failed = True
+
+            # check for correct types of "projects"
+            if "projects" in js:
+                p = js["projects"]
+                for item in p:
+                    for k in PROJECTS_REQUIRED:
+                        if k in item and type(PROJECTS_REQUIRED[k]) != type(item[k]):
+                            print("Value for key " + k + " has incorrect type. Got", type(item[k]), "got", type(PROJECTS_REQUIRED[k]))
+                            failed = True
+                    for k in item:
+                        if k not in PROJECTS_REQUIRED:
+                            print("Key", k, "is in \"projects\" but is extraneous.")
+                            failed = True
+    return failed
+
+if __name__ == "__main__":
+    jsonFiles = get_json_files()
+    failed = False
+    for file in jsonFiles:
+        if lint_json(file) == True:
+            failed = True
+
+    if failed:
+        sys.exit(1)
+
