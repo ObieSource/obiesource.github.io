@@ -7,7 +7,8 @@
 		"https://www.youtube.com/c/briandavidgilbert"
 	],
 	"bio": "Hello! I'm a 6th year Geography major with a concentration in Computer Science. I like sticks and rocks and mud.",
-	"projects": [{
+	"projects": [
+		{
 			"name": "google",
 			"description": "I made this.",
 			"website": "https://www.google.com"
@@ -15,7 +16,7 @@
 		{
 			"name": "Obiesource Website",
 			"description": "It's the Oberlin Open Source Website!",
-			"website": "https://www.google.com"
+			"website": "https://obiesource.github.io"
 		}
 	]
 }
