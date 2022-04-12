@@ -1,4 +1,6 @@
-# How to contribute!
+# Contribution Guide
+### a step by step guide to how to add yourself to the members list on the website
+
 ## Step 1: Set up Git:
 
 Follow this guide for help setting it up:
@@ -18,45 +20,45 @@ At the top of this page is a "fork" button. Click this button to make a personal
 3. Open a terminal on your computer (e.g. Command Prompt for Windows)
 4. Navigate to where you want to store the repository locally
 5. Enter the following command in your terminal:
-	> git clone <the-link-you-copied>
+	> git clone {the-link-you-copied}
 6. Make a new branch (optional):
 	- enter the following commands:
-	> git branch new-member
-	> git checkout new-member
+	`> git branch new-member
+	> git checkout new-member`
 
 ## Step 4: Make changes:
 
 1. Navigate to .../obiesource.github.io/members
 2. Make a copy of template.json
-3. Rename the copy <your-last-name>.json
+3. Rename the copy {your-last-name}.json
 4. Edit the document with your own personal information. All fields are optional (just delete them to remove them from the page)
 5. Edit memberslist.json, and add yourself to the members field
-	- the addition should look like this: {"name": "Your Name", "href": "/member.html?<your-last-name>"}
+	- the addition should look like this: {"name": "Your Name", "href": "/member.html?{your-last-name}"}
 	- correct spelling and quotation and comma placement are very imporant
 
 ## Step 5: Test your changes:
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following command:
-	> python3 -m http.server --bind 127.0.0.1 8000
-3. In your favorite web browser, navigate to http://127.0.0.1:8000/member.html?name=<your-last-name>
+	`> python3 -m http.server --bind 127.0.0.1 8000`
+3. In your favorite web browser, navigate to http://127.0.0.1:8000/member.html?name={your-last-name}
 4. You should see a page with all your information on it!
-	- If you see an error message, try to fix the error in members/<your-last-name>.json
+	- If you see an error message, try to fix the error in members/{your-last-name}.json
 	- If you don't see anything, check the spelling, quotations, and commas in your entry in memberslist.json
 
 ## Step 6: Push the repository:
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following commands:
-	> git add members/<your-last-name>.json memberslist.json
+	`> git add members/{your-last-name}.json memberslist.json
 	> git commit -m "Adding myself to the members list"
-	> git push
+	> git push`
 
 ## Step 7: Make a pull request
 
 A pull request is a request to have the changes from your forked repository added to the origin repository.
 1. Open your forked repository in github.
 2. Above your files should be a message that says "This branch is 1 commit ahead of ObieSource/obiesource.github.io:main."
-	-If the message says "This branch is X commits _behind_ ObieSource/...:main", click Fetch Upstream > Fetch and Merge
+	- If the message says "This branch is X commits _behind_ ObieSource/...:main", click Fetch Upstream > Fetch and Merge
 3. Click Contribute > Open pull request > Open pull request
 4. Now just wait! We'll review the additions and either give you feedback or accept the request!
