@@ -17,30 +17,34 @@ function onGet(result){
 
     // fill in as many social media accounts
     // as the member specified
-    for (var i = 0; i < result["socials"].length; i++){
-        var s = result["socials"][i];
-        
-        var l = $("<a>");
-        l.attr("href", s);
-        l.text(s);
-        l.insertBefore("p.memberbio");
-        $("<br>").insertBefore("p.memberbio");
+    if (result["socials"]) {
+        for (var i = 0; i < result["socials"].length; i++){
+            var s = result["socials"][i];
+
+            var l = $("<a>");
+            l.attr("href", s);
+            l.text(s);
+            l.insertBefore("p.memberbio");
+            $("<br>").insertBefore("p.memberbio");
+        }
     }
 
     // bio
     $("p.memberbio").text(result["bio"]);
 
     // list projects
-    for (var j = 0; j < result["projects"].length; j++){
-        var curpro = result["projects"][j];
-        var cell = $("<a>");
-        cell.attr("href",  curpro["website"]);
-        cell.text(curpro["name"]);
-        cell.insertBefore("div.memberbot");
-        var c2 = $("<span>");
-        c2.text(" - " + curpro["description"]);
-        c2.insertBefore("div.memberbot");
-        $("<br>").insertBefore("div.memberbot");
+    if (result["projects"]) {
+        for (var j = 0; j < result["projects"].length; j++){
+            var curpro = result["projects"][j];
+            var cell = $("<a>");
+            cell.attr("href",  curpro["website"]);
+            cell.text(curpro["name"]);
+            cell.insertBefore("div.memberbot");
+            var c2 = $("<span>");
+            c2.text(" - " + curpro["description"]);
+            c2.insertBefore("div.memberbot");
+            $("<br>").insertBefore("div.memberbot");
+        }
     }
 }
 
