@@ -7,7 +7,10 @@ function on404(result){
     $("h3.memberprons").text("404 user not found");
 }
 
-function onGet(result){
+function onGet(result, textStatus, errorThrown){
+    if (errorThrown) {
+        $("h1").text(`There was an error! ${errorThrown}`);
+    }
 
     // name
     $("h1.membername").text(result["name"]);
