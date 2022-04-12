@@ -1,0 +1,15 @@
+{
+    "name": "John Doe",
+    "pronouns": "He/Him/His",
+    "class": "'24",
+    "socials": [
+    ],
+    "bio": "My name is John",
+    "projects": [
+        {
+            "name": "ObieSource/obiesource.github.io",
+            "description": "A cool website",
+            "website": "https://github.com/ObieSource/obiesource.github.io"
+        }
+    ]
+}
