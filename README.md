@@ -1,5 +1,6 @@
 # Contribution Guide
-### a step by step guide to how to add yourself to the members list on the website
+### A step by step guide to how to add yourself to the members list on the website
+A video version of this guide can be found here: https://spectra.video/w/grq4Zr6rofFbef5di5iSqa
 
 ## Step 1: Set up Git:
 
