@@ -41,10 +41,11 @@ At the top of this page is a "fork" button. Click this button to make a personal
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following command:
 	> python3 -m http.server --bind 127.0.0.1 8000
-3. In your favorite web browser, navigate to http://127.0.0.1:8000/member.html?name={your-last-name}
-4. You should see a page with all your information on it!
+3. In your favorite web browser, navigate to <http://127.0.0.1:8000/>. Click the link to the members directory.
+4. You should see a page that includes your name. Click on it.
+	- If you don't see your name, check the spelling, quotations, and commas in your entry in memberslist.json
+5. You should see a page with all your information on it!
 	- If you see an error message, try to fix the error in members/{your-last-name}.json
-	- If you don't see anything, check the spelling, quotations, and commas in your entry in memberslist.json
 
 ## Step 6: Push the repository:
 
