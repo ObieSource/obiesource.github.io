@@ -24,8 +24,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 	> git clone {the-link-you-copied}
 6. Make a new branch (optional):
 	- enter the following commands:
-	> git branch new-member  
-	> git checkout new-member
+	> git checkout -b new-member
 
 ## Step 4: Make changes:
 
