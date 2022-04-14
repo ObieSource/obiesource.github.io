@@ -33,7 +33,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 3. Rename the copy {your-last-name}.json
 4. Edit the document with your own personal information. All fields are optional (just delete them to remove them from the page)
 5. Edit memberslist.json, and add yourself to the members field
-	- the addition should look like this: {"name": "Your Name", "href": "/member.html?{your-last-name}"}
+	- the addition should look like this: `{"name": "Your Name", "href": "/member.html?{your-last-name}"}`
 	- correct spelling and quotation and comma placement are very imporant
 
 ## Step 5: Test your changes:
