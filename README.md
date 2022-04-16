@@ -2,11 +2,16 @@
 ### A step by step guide to how to add yourself to the members list on the website
 A video version of this guide can be found here: https://spectra.video/w/grq4Zr6rofFbef5di5iSqa
 
-## Step 1: Set up Git:
+## Step 1: Set up Git (and Python):
 
 Follow this guide for help setting it up:
 https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git
 This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
+
+After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command:
+	> python --version
+If you receive an error, then you need to install python. Do so by running the following command in your terminal:
+	> python
 
 ## Step 2: Fork the repository:
 
