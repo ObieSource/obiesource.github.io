@@ -12,14 +12,14 @@ main {
 }
 
 header {
-	background-color: tomato;
+	background-color: white;
 	position: fixed;
 	left: 0;
 	right: 0;
-	top: 5px;
+	top: 0px;
 	height: 20px;
 	align-items: center;
-	box-shadow: 0 0 25px 0 black;
+    border: 1px solid black;
 }
 
 header * {
@@ -31,6 +31,7 @@ header li {
 }
 
 header li a {
-	color: blue;
+	color: black;
+    font-weight: bold;
 	text-decoration: none;
 }
