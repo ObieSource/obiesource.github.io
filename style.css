@@ -17,17 +17,26 @@ header {
 	left: 0;
 	right: 0;
 	top: 0px;
-	height: 20px;
 	align-items: center;
     border: 1px solid black;
 }
 
 header * {
-	display: inline;
+    text-decoration: underline;
+}
+
+header ul {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
 }
 
 header li {
-	margin: 20px;
+	margin: 0px;
+    padding: 0px;
+    margin-right: 1.5em;
 }
 
 header li a {
