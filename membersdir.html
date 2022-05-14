@@ -6,7 +6,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="main">
+    <!-- Attempt at a navbar without bootstrap API lol -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/membersdir.html">Members</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
         <a href="/">Go Home</a>
         <h2>Obiesource Members Directory</h2>
         <h3 style="margin-bottom:0px;">Club Officers</h3>
@@ -18,6 +30,6 @@
         <noscript>
             <h3>View the members directory via json <a href="/memberslist.json">here.</a></h3>
         </noscript>
-    </div>
+    </main>
     <script src="/directoryscr.js"></script>
 </body>
