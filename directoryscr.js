@@ -4,7 +4,7 @@ function populateOfficersOrMembers(membs, target){
     for (var j = 0; j < membs.length; j++){
         var mem = membs[j];
         var cell = $("<a>")
-        cell.attr("href", mem["href"]);
+        cell.attr("href", `/member.html?name=${mem.id}`);
         cell.text(mem["name"]);
         ul.append(cell);
         cell.wrap("<li></li>");

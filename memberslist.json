@@ -1,8 +1,51 @@
 {
     "officers": [
-	  {"name": "Ike Osenberg", "href": "/member.html?name=osenberg"}
+        {
+            "id": "osenberg",
+            "name": "Ike Osenberg",
+            "pronouns": "he/him/his or they/them/theirs",
+            "class": "'23",
+            "socials": [
+                "https://github.com/iosenberg"
+            ],
+            "bio": "Hi! I'm from just North of Philadelphia, I'm a 3rd year Computer Science and Musical Studies major, and Linguistics minor, and I'm a leader of Oberlin Open Source! I'm working on a few long term projects right now, including a Workchart generator for my dining co-op (Pyle) and a structure-overhaul mod for Minecraft. I also teach ToadsCo (an ExCo about herpetology), I work as an RA in Burton and as a technology consultant at the CIT Help Desk, and I am a Membership Coordinator for Pyle Co-op.",
+            "projects": [
+                {
+                    "name": "Workchart Generator",
+                    "description": "Builds a workchart off of a set of co-opers and availabilites read from a Google Form",
+                    "website": "https://github.com/iosenberg/WorkchartGenerator"
+                },
+                {
+                    "name": "The Polis Project",
+                    "description": "A Minecraft Mod which adds more and more complex populated structures, as well as roads spanning the world which connect structures.",
+                    "website": "https://github.com/iosenberg/PolisProject"
+                }
+            ]
+        }
     ],
     "members": [
-        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"}
+        {
+            "id": "rehwinkel",
+            "name": "William Rehwinkel",
+            "pronouns": "he/him/his",
+            "class": "'24",
+            "socials": [
+                "https://koyu.space/@fiskfan1999",
+                "https://spectra.video/c/willrehwinkel_organ/videos"
+            ],
+            "bio": "I'm a 3rd year double-degree student majoring in Computer Science and the Pipe Organ currently living in the New York/New Jersey area. I particularly love open-source projects, not only using them, but contributing to them and developing my own. My favorites are ffmpeg, ergo (an IRC daemon, which I'm particularly proud of having contributed to), and the Tor network. Recently, I moved to a new peertube instance which you can find above.",
+            "projects": [
+                {
+                    "name": "FiskFan1999/wvlist",
+                    "description": "Catalogue of composers list of works with community submissions",
+                    "website": "https://wvlist.net"
+                },
+                {
+                    "name": "ObieSource/peertube-multipart-upload",
+                    "description": "Command-line application to upload videos to a Peertube instance using the API.",
+                    "website": "https://github.com/ObieSource/peertube-multipart-upload"
+                }
+            ]
+        }
     ]
 }

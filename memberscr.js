@@ -7,10 +7,13 @@ function on404(result){
     $("h3.memberprons").text("404 user not found");
 }
 
-function onGet(result, textStatus, errorThrown){
+function onGet(memberslist, textStatus, errorThrown){
     if (errorThrown) {
         $("h1").text(`There was an error! ${errorThrown}`);
     }
+
+    const { officers, members } = memberslist;
+    const result = officers.concat(members).find((m) => m.id === id);
 
     // name
     $("h1.membername").text(result["name"]);
@@ -53,7 +56,7 @@ function onGet(result, textStatus, errorThrown){
 
 $.ajax({
     type: "GET",
-    url: "/members/" + id + ".json",
+    url: "/memberslist.json",
     statusCode: {
         200: onGet,
         404: on404
