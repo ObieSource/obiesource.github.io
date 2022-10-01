@@ -10,7 +10,10 @@ Follow this guide for help setting it up:
 https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git
 This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
 
-After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command: > python --version
+After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command: 
+```sh
+python --version
+```
 If you receive an error, then you need to install python. Do so by running the following command in your terminal: > python
 
 ## Step 2: Fork the repository:
@@ -26,10 +29,14 @@ At the top of this page is a "fork" button. Click this button to make a personal
 3. Open a terminal on your computer (e.g. Command Prompt for Windows)
 4. Navigate to where you want to store the repository locally
 5. Enter the following command in your terminal:
-   > git clone {the-link-you-copied}
+   ```sh
+   git clone {the-link-you-copied}
+   ```
 6. Make a new branch (optional):
    - enter the following commands:
-     > git checkout -b new-member
+      ```sh
+      git checkout -b new-member
+      ```
 
 ## Step 4: Make changes:
 
@@ -45,7 +52,9 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following command:
-   > python3 -m http.server --bind 127.0.0.1 8000
+   ```sh
+   python3 -m http.server --bind 127.0.0.1 8000
+   ```
 3. In your favorite web browser, navigate to <http://127.0.0.1:8000/>. Click the link to the members directory.
 4. You should see a page that includes your name. Click on it.
    - If you don't see your name, check the spelling, quotations, and commas in your entry in memberslist.json
@@ -56,9 +65,11 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following commands:
-   > git add members/{your-last-name}.json memberslist.json  
-   > git commit -m "Adding myself to the members list"  
-   > git push
+   ```sh
+   git add members/{your-last-name}.json memberslist.json  
+   git commit -m "Adding myself to the members list"  
+   git push
+   ```
 
 ## Step 7: Make a pull request
 
