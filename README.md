@@ -10,10 +10,12 @@ Follow this guide for help setting it up:
 https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git
 This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
 
-After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command: 
+After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command:
+
 ```sh
 python --version
 ```
+
 If you receive an error, then you need to install python. Do so by running the following command in your terminal: > python
 
 ## Step 2: Fork the repository:
@@ -34,9 +36,9 @@ At the top of this page is a "fork" button. Click this button to make a personal
    ```
 6. Make a new branch (optional):
    - enter the following commands:
-      ```sh
-      git checkout -b new-member
-      ```
+     ```sh
+     git checkout -b new-member
+     ```
 
 ## Step 4: Make changes:
 
@@ -66,8 +68,8 @@ At the top of this page is a "fork" button. Click this button to make a personal
 1. In your terminal, navigate to .../obiesource.github.io/
 2. Run the following commands:
    ```sh
-   git add members/{your-last-name}.json memberslist.json  
-   git commit -m "Adding myself to the members list"  
+   git add members/{your-last-name}.json memberslist.json
+   git commit -m "Adding myself to the members list"
    git push
    ```
 
