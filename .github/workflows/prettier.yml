@@ -3,10 +3,10 @@ name: Continuous Integration
 # This action works with pull requests and pushes
 on:
   pull_request:
-	- main
+	- "**"
   push:
     branches:
-      - main
+      - "**"
 
 jobs:
   prettier:
