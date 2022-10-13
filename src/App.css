@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+    
+.color__text {
+    color: var(--color-text);
+}
+
+.color__subtext {
+    color: var(--color-text-alt);
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}
