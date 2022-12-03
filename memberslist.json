@@ -3,6 +3,7 @@
 	  {"name": "Ike Osenberg", "href": "/member.html?name=osenberg"}
     ],
     "members": [
-        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"}
+        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"},
+        {"name": "Ben Snyder", "href": "/member.html?name=snyder"}
     ]
 }
