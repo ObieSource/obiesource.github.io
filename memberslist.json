@@ -3,8 +3,13 @@
 	  {"name": "Ike Osenberg", "href": "/member.html?name=osenberg"}
     ],
     "members": [
+<<<<<<< HEAD
         {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"}
 		{"name": "Ben Tokerl", "href": "/member.html?name=toker"}	
 		
+=======
+        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"},
+        {"name": "Ben Snyder", "href": "/member.html?name=snyder"}
+>>>>>>> refs/remotes/origin/main
     ]
 }
