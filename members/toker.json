@@ -1,0 +1,16 @@
+{
+	"name": "Ben Toker",
+	"pronouns": "he/him/his",
+	"class": "'26",
+	"socials": [
+		"https://instagram.com/tenboker"
+	],
+	"bio": "Possibly cool."
+	"projects": [
+		{
+			"name": "webScrape",
+			"description": "I made this.",
+			"website": "https://github.com"
+		}
+	]
+}
