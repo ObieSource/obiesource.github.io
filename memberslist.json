@@ -1,5 +1,6 @@
 {
     "officers": [
+	  {"name": "William Knowles-Kellett", "href": "/member.html?name=knowles-kellett"},
 	  {"name": "Ike Osenberg", "href": "/member.html?name=osenberg"}
     ],
     "members": [
