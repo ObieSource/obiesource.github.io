@@ -1,8 +1,12 @@
 {
     "officers": [
+	  {"name": "William Knowles-Kellett", "href": "/member.html?name=knowles-kellett"},
 	  {"name": "Ike Osenberg", "href": "/member.html?name=osenberg"}
     ],
     "members": [
-        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"}
+		{"name": "Ben Toker", "href": "/member.html?name=toker"},
+        {"name": "William Rehwinkel", "href": "/member.html?name=rehwinkel"},
+        {"name": "Jasper Thomas-Yount", "href": "member.html?name=thomas-yount"},
+        {"name": "Ben Snyder", "href": "/member.html?name=snyder"}
     ]
 }
