@@ -1,36 +1,35 @@
 .obs__projects {
-    background-color: var(--color-text);
-    width: 100%;
-    padding: 2rem 6rem;
+  background-color: var(--color-text);
+  width: 100%;
+  padding: 2rem 6rem;
 }
 
 .obs__projects-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
 }
 
 .obs__projects-project {
-    border: 1px solid var(--color-bg);
-    border-radius: 10px;
+  border: 1px solid var(--color-bg);
+  border-radius: 10px;
 }
 
 .obs__projects-project-heading {
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-family-display);
-    padding: 2rem 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-family-display);
+  padding: 2rem 1.7rem;
 }
 
 .obs__projects-project-heading-status {
-    color: var(--color-bg-alt)
+  color: var(--color-bg-alt);
 }
 
 .obs__projects-project-heading-title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .obs__project-image {
-    padding: 2rem 1.7rem;
+  padding: 2rem 1.7rem;
 }
-

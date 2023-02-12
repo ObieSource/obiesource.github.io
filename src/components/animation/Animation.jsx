@@ -1,10 +1,8 @@
-import React from 'react'
-import './animation.css'
+import React from "react";
+import "./animation.css";
 
 const Animation = () => {
-  return (
-    <div className='color__text'>Animation hiiii</div>
-  )
-}
+  return <div className="color__text">Animation hiiii</div>;
+};
 
-export default Animation
+export default Animation;

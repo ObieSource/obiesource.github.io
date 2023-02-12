@@ -2,9 +2,9 @@ name: HTML Linter
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      
-    - name: htmlLint
-      # https://github.com/htmlhint/HTMLHint
-      run: make lint
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - name: htmlLint
+        # https://github.com/htmlhint/HTMLHint
+        run: make lint
