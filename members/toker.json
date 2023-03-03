@@ -1,7 +1,7 @@
 {
 	"name": "Ben Toker",
 	"pronouns": "he/him/his",
-	"class": "'26",
+	"class": "Class of 2026",
 	"socials": [
 		"https://instagram.com/tenboker"
 	],
@@ -10,7 +10,7 @@
 		{
 			"name": "webScrape",
 			"description": "I made this.",
-			"website": "https://github.com"
+			"website": "btoker.dev"
 		}
 	]
 }
