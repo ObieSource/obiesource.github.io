@@ -13,15 +13,15 @@ const Member = ({ name }) => {
 
 const Members = () => {
   return (
-    <main className="color__text">
-      <h2>Obiesource Members Directory</h2>
-      <h3>Club Officers</h3>
+    <main className="content color__text">
+      <h1>Obiesource Members Directory</h1>
+      <h2>Club Officers</h2>
       <ul className="diroff">
         {members.officers.map((officer) => (
           <Member name={officer.name} />
         ))}
       </ul>
-      <h3>Members</h3>
+      <h2>Members</h2>
       <ul className="dirmem">
         {members.members.map((member) => (
           <Member name={member.name} />

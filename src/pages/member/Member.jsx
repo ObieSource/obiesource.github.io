@@ -35,10 +35,12 @@ const Member = () => {
     members.members.find((member) => member.name === name) ||
     members.officers.find((officer) => officer.name === name);
   if (!member) {
-    return <main className="color__text">Member not found: {name}</main>;
+    return (
+      <main className="content color__text">Member not found: {name}</main>
+    );
   }
   return (
-    <main className="color__text">
+    <main className="content color__text">
       <h1>
         {member.name} {member.class}, {member.pronouns}
       </h1>

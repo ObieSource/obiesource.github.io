@@ -3,8 +3,8 @@ import "./about.css";
 
 const About = () => {
   return (
-    <main className="color__text">
-      <h1>What is Open Source?</h1>
+    <main className="content color__text">
+      <h2>What is Open Source?</h2>
       <p>
         Open Source is a programming philosophy that work and ownership of
         projects should be decentralized and community-based. Open Source
@@ -13,7 +13,7 @@ const About = () => {
         Firefox, Linux, Audacity, and Wordpress.
       </p>
 
-      <h1>What do we do?</h1>
+      <h2>What do we do?</h2>
       <p>
         Oberlin Open Source Club (ObieSource) is a club in which students can
         interact with Oberlin-specific open source projects. Anyone can join,

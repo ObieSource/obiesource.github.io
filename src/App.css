@@ -6,12 +6,44 @@
 }
 
 body {
+  height: 100%;
   background-color: var(--color-bg);
 }
 
 a {
   color: unset;
   text-decoration: none;
+}
+
+html,
+#root,
+.App {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  padding: 2rem 8rem;
+  font-size: 20px;
+  background-color: #121212;
+}
+
+.content h2 {
+  font-size: 25px;
+  margin-top: 1rem;
+}
+
+.content p {
+  margin-top: 0.5rem;
+}
+
+.content ul,
+.content ol {
+  padding: 1rem;
+}
+
+.content a {
+  color: #8cb4ff;
 }
 
 .color__text {
