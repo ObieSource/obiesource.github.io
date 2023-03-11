@@ -28,6 +28,12 @@ html,
   background-color: #121212;
 }
 
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 2rem 3rem;
+  }
+}
+
 .content h2 {
   font-size: 25px;
   margin-top: 1rem;
