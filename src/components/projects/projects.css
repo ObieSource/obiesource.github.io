@@ -5,21 +5,24 @@
 }
 
 .obs__projects-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .obs__projects-project {
   border: 1px solid var(--color-bg);
   border-radius: 10px;
+  padding: 2rem 1.7rem;
+  width: 25rem;
 }
 
 .obs__projects-project-heading {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-family-display);
-  padding: 2rem 1.7rem;
+  padding-bottom: 1rem;
 }
 
 .obs__projects-project-heading-status {

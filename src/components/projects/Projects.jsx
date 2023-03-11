@@ -1,39 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./projects.css";
 
 const Projects = () => {
+  const [projects, setProjects] = useState(null);
+
+  useEffect(() => {
+    // fetch data
+    const dataFetch = async () => {
+      const data = await (
+        await fetch("https://api.github.com/orgs/ObieSource/repos")
+      ).json();
+
+      // set state when the data received
+      setProjects(data);
+    };
+
+    dataFetch();
+  }, []);
+
+  if (!projects) return <div>Loading...</div>;
+
   return (
     <div className="obs__projects">
       <div className="obs__projects-container">
-        <div className="obs__projects-project">
-          <div className="obs__project-image"></div>
-          <div className="obs__projects-project-heading">
-            <div className="obs__projects-project-heading-title">Genetics</div>
-            <div className="obs__projects-project-heading-status">
-              IN PROGRESS
+        {projects.map((project) => (
+          <div className="obs__projects-project" key={project}>
+            <div className="obs__projects-project-heading">
+              <div className="obs__projects-project-heading-title">
+                <a href={project.html_url}>{project.name}</a>
+              </div>
+              <div className="obs__projects-project-heading-status">
+                {project.license?.spdx_id}
+              </div>
+            </div>
+            <div className="obs__projects-project-heading-description">
+              {project.description}
             </div>
           </div>
-        </div>
-        <div className="obs__projects-project">
-          <div className="obs__project-image"></div>
-          <div className="obs__projects-project-heading">
-            <div className="obs__projects-project-heading-title">
-              TimeStretch
-            </div>
-            <div className="obs__projects-project-heading-status">
-              IN PROGRESS
-            </div>
-          </div>
-        </div>
-        <div className="obs__projects-project">
-          <div className="obs__project-image">{/* <img></img> */}</div>
-          <div className="obs__projects-project-heading">
-            <div className="obs__projects-project-heading-title">Website</div>
-            <div className="obs__projects-project-heading-status">
-              IN PROGRESS
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
