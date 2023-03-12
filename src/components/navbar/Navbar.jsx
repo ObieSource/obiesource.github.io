@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -10,18 +11,18 @@ const Navbar = () => {
       <div className="obs__navbar-links">
         <div className="obs__navbar-links_logo">
           <p>
-            <a href="/">ObieSource</a>
+            <Link to="/">ObieSource</Link>
           </p>
         </div>
         <div className="obs__navbar-links_container">
           <p>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </p>
           <p>
-            <a href="/members">Members</a>
+            <Link to="/members">Members</Link>
           </p>
           <p>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </p>
         </div>
       </div>
@@ -43,13 +44,13 @@ const Navbar = () => {
           <div className="obs__navbar-menu_container">
             <div className="obs__navbar-menu_container-links">
               <p>
-                <a href="/about">About</a>
+                <Link to="/about">About</Link>
               </p>
               <p>
-                <a href="/members">Members</a>
+                <Link to="/members">Members</Link>
               </p>
               <p>
-                <a href="/contact">Contact</a>
+                <Link to="/contact">Contact</Link>
               </p>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./introduction.css";
 
 const Introduction = () => {
@@ -26,7 +27,7 @@ const Introduction = () => {
             </p>
           </div>
           <div className="obs__introduction-links">
-            <a href="/about">Learn More</a>
+            <Link to="/about">Learn More</Link>
           </div>
         </div>
       </div>
