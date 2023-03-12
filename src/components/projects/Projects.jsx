@@ -24,7 +24,7 @@ const Projects = () => {
     <div className="obs__projects">
       <div className="obs__projects-container">
         {projects.map((project) => (
-          <div className="obs__projects-project" key={project}>
+          <div className="obs__projects-project" key={project.name}>
             <div className="obs__projects-project-heading">
               <div className="obs__projects-project-heading-title">
                 <a href={project.html_url}>{project.name}</a>
