@@ -6,7 +6,7 @@ const Introduction = () => {
   return (
     <div className="obs__introduction">
       <div className="obs__introduction-heading">
-        <h1>Where developers build togeher</h1>
+        <h1>Where developers build together</h1>
       </div>
       <div className="obs__introduction-description__container">
         <div className="obs__introduction-description-buls">
@@ -16,22 +16,18 @@ const Introduction = () => {
               Members can present about their projects and find their teammates.
             </p>
           </div>
-          <div className="obs__introduction-description description_second-bul">
-            <h3>Contribute to projects</h3>
-            <p>Hop in the development of an in-progress project.</p>
-          </div>
           <div className="obs__introduction-description description_third-bul">
             <h3>Develop your skills</h3>
             <p>
               Hone your collaboration skills, as well as learn new technologies.
             </p>
           </div>
-          <div className="obs__introduction-links">
-            <Link to="/about">Learn More</Link>
+          <div className="obs__introduction-description description_second-bul">
+            <h3>Contribute to projects</h3>
+            <p>Hop in the development of an in-progress project.</p>
           </div>
         </div>
       </div>
-      <div className="obs__introduction"></div>
     </div>
   );
 };

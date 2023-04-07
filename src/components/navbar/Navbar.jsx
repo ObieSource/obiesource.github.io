@@ -11,18 +11,20 @@ const Navbar = () => {
       <div className="obs__navbar-links">
         <div className="obs__navbar-links_logo">
           <p>
-            <Link to="/">ObieSource</Link>
+            <Link to="/">
+              {"{"}obiesource{"}"}
+            </Link>
           </p>
         </div>
         <div className="obs__navbar-links_container">
-          <p>
-            <Link to="/about">About</Link>
-          </p>
           <p>
             <Link to="/members">Members</Link>
           </p>
           <p>
             <Link to="/contact">Contact</Link>
+          </p>
+          <p>
+            <Link to="/about">About</Link>
           </p>
         </div>
       </div>

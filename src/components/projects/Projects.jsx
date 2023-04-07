@@ -12,7 +12,9 @@ const Projects = () => {
       ).json();
 
       // set state when the data received
-      setProjects(data);
+      setProjects(
+        data.sort((a, b) => b.updated_at.localeCompare(a.updated_at))
+      );
     };
 
     dataFetch();
