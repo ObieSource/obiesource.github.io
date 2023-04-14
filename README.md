@@ -1,3 +1,5 @@
+NOTE: This README is out of date and we're working on fixing it. If you want help contributing in the near future, please ask us!
+
 # Contribution Guide
 
 ### A step by step guide to how to add yourself to the members list on the website
