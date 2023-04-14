@@ -22,7 +22,7 @@
       "pronouns": "he/him/his or they/them/theirs",
       "class": "'23",
       "socials": ["https://github.com/iosenberg"],
-      "bio": "Hi! I'm from just North of Philadelphia, I'm a 3rd year Computer Science and Musical Studies major, and Linguistics minor, and I'm a leader of Oberlin Open Source! I'm working on a few long term projects right now, including a Workchart generator for my dining co-op (Pyle) and a structure-overhaul mod for Minecraft. I also teach ToadsCo (an ExCo about herpetology), I work as an RA in Burton and as a technology consultant at the CIT Help Desk, and I am a Membership Coordinator for Pyle Co-op.",
+      "bio": "Hi! I'm from just North of Philadelphia, I'm a 4th year Computer Science and Musical Studies major, and Linguistics minor, and I'm a leader of Oberlin Open Source! I'm working on a few long term projects right now, including a Workchart generator for my dining co-op (Pyle) and a structure-overhaul mod for Minecraft. I also teach ToadsCo (an ExCo about frogs and toads), I work as a technology consultant at the CIT Help Desk and an intern at Acoustik Musik, Ltd., and I am the Pizza Dough Maker for Pyle Co-op. :)",
       "projects": [
         {
           "name": "Workchart Generator",
@@ -41,14 +41,14 @@
     {
       "name": "Ben Toker",
       "pronouns": "he/him/his",
-      "class": "'26",
+      "class": "Class of 2026",
       "socials": ["https://instagram.com/tenboker"],
       "bio": "Possibly cool.",
       "projects": [
         {
           "name": "webScrape",
           "description": "I made this.",
-          "website": "https://github.com"
+          "website": "https://btoker.dev"
         }
       ]
     },
@@ -101,6 +101,47 @@
       "class": "'24",
       "socials": ["https://github.com/yen-mai-codes"],
       "bio": "I am a 3rd year Computer Science major. I like manga and jewelry making."
+    },
+    {
+      "name": "Ezra Crowe",
+      "pronouns": "he/him/",
+      "class": "'26",
+      "socials": [
+        "https://github.com/AbdominalBenito/obiesource.github.io",
+        "insta: ezra.crowe"
+      ],
+      "bio": "Im Ezra Crowe. Im an aspiring computer scientist from Seattle Washington. Im excited to be a part of Obie Source and start my journey of collaborative coding."
+    },
+    {
+      "name": "Nghi Nguyen",
+      "pronouns": "he/him/his",
+      "class": "'24",
+      "socials": ["https://github.com/nghi01"],
+      "bio": "Hello! I'm a 3rd year Computer Science major, Philosophy Minor. My favorite game is Dark Souls III, favorite book is Kokoro by Natsume Souseki. I also like touching grass.",
+      "projects": [
+        {
+          "name": "MazeGame",
+          "description": "I made a maze exploration game with some friends in Unreal Engine. Still under development though.",
+          "website": "https://github.com/bucket420/MazeGame"
+        }
+      ]
+    },
+    {
+      "name": "Kai Monno",
+      "pronouns": "he/ him/ his",
+      "class": "'26",
+      "socials": [
+        "https://www.instagram.com/kaimonno/",
+        "https://www.facebook.com/kai.monno.92/"
+      ],
+      "bio": "Hello, I am Kai Monno I am a first year computer science major. I plan to get very involved in the obiesource club!",
+      "projects": [
+        {
+          "name": "My Github",
+          "description": "This is my github.",
+          "website": "https://github.com/KaiMonno"
+        }
+      ]
     }
   ]
 }
