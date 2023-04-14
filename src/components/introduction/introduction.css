@@ -59,10 +59,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  .obs__introduction-description-buls {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
   .obs__introduction {
     padding: 2rem 4rem;
   }
