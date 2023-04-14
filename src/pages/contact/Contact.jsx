@@ -12,9 +12,12 @@ const Contact = () => {
       </p>
       <p>
         Want to get involved?{" "}
-        <a href="/redirect/discord.html">Join our discord</a> or come to one of
-        our meetings posted in{" "}
-        <a href="/redirect/calendar.html">our calendar</a>.
+        <a href="https://discord.gg/z5R6QhBA64">Join our discord</a> or come to
+        one of our meetings posted in{" "}
+        <a href="https://calendar.google.com/calendar/r?cid=b2Jzb3VyY2VAb2Jlcmxpbi5lZHU">
+          our calendar
+        </a>
+        .
       </p>
     </main>
   );
