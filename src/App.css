@@ -39,6 +39,11 @@ html,
   margin-top: 1rem;
 }
 
+.content h3 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
 .content p {
   margin-top: 0.5rem;
 }

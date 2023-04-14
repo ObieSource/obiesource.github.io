@@ -18,6 +18,9 @@ const Navbar = () => {
         </div>
         <div className="obs__navbar-links_container">
           <p>
+            <Link to="/resources">Resources</Link>
+          </p>
+          <p>
             <Link to="/members">Members</Link>
           </p>
           <p>
