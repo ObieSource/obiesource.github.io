@@ -1,0 +1,40 @@
+.obs__projects {
+  width: 100%;
+  padding: 2rem 6rem;
+  color: white;
+}
+
+.obs__projects-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.obs__projects-project {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2rem 1.7rem;
+  width: 25rem;
+  background-color: #15181d;
+}
+
+.obs__projects-project-heading {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-family-display);
+  padding-bottom: 1rem;
+}
+
+.obs__projects-project-heading-status {
+  color: var(--color-bg-alt);
+}
+
+.obs__projects-project-heading-title {
+  color: #2f81f7;
+  font-weight: 700;
+}
+
+.obs__project-image {
+  padding: 2rem 1.7rem;
+}

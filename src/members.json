@@ -1,0 +1,147 @@
+{
+  "officers": [
+    {
+      "name": "William Knowles-Kellett",
+      "pronouns": "he/him/his",
+      "class": "'23",
+      "socials": [
+        "https://github.com/wknowleskellett",
+        "https://williamknowleskellett.dev/"
+      ],
+      "bio": "Hi, I'm William. I'm a Math and Computer Science major. I've been trying to improve how knowledge is passed down among students in the CS department, through ObieSource and improvements to lab helping and the CS Majors committee.",
+      "projects": [
+        {
+          "name": "My Website",
+          "description": "I use my website as a home for the public facing version of anything I work on. I wrote the HTML/CSS/JS myself from scratch. Other than as an exercise, I don't recommend it.",
+          "website": "https://williamknowleskellett.dev/"
+        }
+      ]
+    },
+    {
+      "name": "Ike Osenberg",
+      "pronouns": "he/him/his or they/them/theirs",
+      "class": "'23",
+      "socials": ["https://github.com/iosenberg"],
+      "bio": "Hi! I'm from just North of Philadelphia, I'm a 4th year Computer Science and Musical Studies major, and Linguistics minor, and I'm a leader of Oberlin Open Source! I'm working on a few long term projects right now, including a Workchart generator for my dining co-op (Pyle) and a structure-overhaul mod for Minecraft. I also teach ToadsCo (an ExCo about frogs and toads), I work as a technology consultant at the CIT Help Desk and an intern at Acoustik Musik, Ltd., and I am the Pizza Dough Maker for Pyle Co-op. :)",
+      "projects": [
+        {
+          "name": "Workchart Generator",
+          "description": "Builds a workchart off of a set of co-opers and availabilites read from a Google Form",
+          "website": "https://github.com/iosenberg/WorkchartGenerator"
+        },
+        {
+          "name": "The Polis Project",
+          "description": "A Minecraft Mod which adds more and more complex populated structures, as well as roads spanning the world which connect structures.",
+          "website": "https://github.com/iosenberg/PolisProject"
+        }
+      ]
+    }
+  ],
+  "members": [
+    {
+      "name": "Ben Toker",
+      "pronouns": "he/him/his",
+      "class": "Class of 2026",
+      "socials": ["https://instagram.com/tenboker"],
+      "bio": "Possibly cool.",
+      "projects": [
+        {
+          "name": "webScrape",
+          "description": "I made this.",
+          "website": "https://btoker.dev"
+        }
+      ]
+    },
+    {
+      "name": "William Rehwinkel",
+      "pronouns": "he/him/his",
+      "class": "'24",
+      "socials": [
+        "https://koyu.space/@fiskfan1999",
+        "https://spectra.video/c/willrehwinkel_organ/videos"
+      ],
+      "bio": "I'm a 3rd year double-degree student majoring in Computer Science and the Pipe Organ currently living in the New York/New Jersey area. I particularly love open-source projects, not only using them, but contributing to them and developing my own. My favorites are ffmpeg, ergo (an IRC daemon, which I'm particularly proud of having contributed to), and the Tor network. Recently, I moved to a new peertube instance which you can find above.",
+      "projects": [
+        {
+          "name": "FiskFan1999/wvlist",
+          "description": "Catalogue of composers list of works with community submissions",
+          "website": "https://wvlist.net"
+        },
+        {
+          "name": "ObieSource/peertube-multipart-upload",
+          "description": "Command-line application to upload videos to a Peertube instance using the API.",
+          "website": "https://github.com/ObieSource/peertube-multipart-upload"
+        }
+      ]
+    },
+    {
+      "name": "Jasper Thomas-Yount",
+      "pronouns": "he/him/his",
+      "class": "'26",
+      "socials": ["https://github.com/zivoric"],
+      "bio": "I'm a first-year student intending to major in Computer Science. Other than CS, I also am studying Chinese and I play the viola.",
+      "projects": [
+        {
+          "name": "ZEnchantmentCore",
+          "description": "Minecraft plugin that adds custom enchantments",
+          "website": "https://github.com/zivoric/ZEnchantmentCore"
+        }
+      ]
+    },
+    {
+      "name": "Ben Snyder",
+      "pronouns": "he/him",
+      "class": "'25",
+      "socials": ["https://www.instagram.com/bensnydoor"],
+      "bio": "I'm a 2nd year CS major"
+    },
+    {
+      "name": "Yen Mai",
+      "pronouns": "she/her/hers",
+      "class": "'24",
+      "socials": ["https://github.com/yen-mai-codes"],
+      "bio": "I am a 3rd year Computer Science major. I like manga and jewelry making."
+    },
+    {
+      "name": "Ezra Crowe",
+      "pronouns": "he/him/",
+      "class": "'26",
+      "socials": [
+        "https://github.com/AbdominalBenito/obiesource.github.io",
+        "insta: ezra.crowe"
+      ],
+      "bio": "Im Ezra Crowe. Im an aspiring computer scientist from Seattle Washington. Im excited to be a part of Obie Source and start my journey of collaborative coding."
+    },
+    {
+      "name": "Nghi Nguyen",
+      "pronouns": "he/him/his",
+      "class": "'24",
+      "socials": ["https://github.com/nghi01"],
+      "bio": "Hello! I'm a 3rd year Computer Science major, Philosophy Minor. My favorite game is Dark Souls III, favorite book is Kokoro by Natsume Souseki. I also like touching grass.",
+      "projects": [
+        {
+          "name": "MazeGame",
+          "description": "I made a maze exploration game with some friends in Unreal Engine. Still under development though.",
+          "website": "https://github.com/bucket420/MazeGame"
+        }
+      ]
+    },
+    {
+      "name": "Kai Monno",
+      "pronouns": "he/ him/ his",
+      "class": "'26",
+      "socials": [
+        "https://www.instagram.com/kaimonno/",
+        "https://www.facebook.com/kai.monno.92/"
+      ],
+      "bio": "Hello, I am Kai Monno I am a first year computer science major. I plan to get very involved in the obiesource club!",
+      "projects": [
+        {
+          "name": "My Github",
+          "description": "This is my github.",
+          "website": "https://github.com/KaiMonno"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background-color: var(--color-bg);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+html,
+#root,
+.App {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  padding: 2rem 8rem;
+  font-size: 20px;
+  background-color: #121212;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 2rem 3rem;
+  }
+}
+
+.content h2 {
+  font-size: 25px;
+  margin-top: 1rem;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.content p {
+  margin-top: 0.5rem;
+}
+
+.content ul,
+.content ol {
+  padding: 1rem;
+}
+
+.content a {
+  color: #8cb4ff;
+}
+
+.color__text {
+  color: var(--color-text);
+}
+
+.color__subtext {
+  color: var(--color-text-alt);
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
