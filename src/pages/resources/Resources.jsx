@@ -8,6 +8,7 @@ const Resources = () => {
       <h2>Learning Git</h2>
       <h3>Learn Git in 15 Minutes</h3>
       <iframe
+        title="Video: Learn Git in 15 Minutes"
         width="420"
         height="315"
         src="https://www.youtube.com/embed/USjZcfj8yxE"
@@ -24,6 +25,7 @@ const Resources = () => {
       <h2>Learning Godot</h2>
       <h3>2D Game Tutorial</h3>
       <iframe
+        title="Video: Godot 2D Game Tutorial"
         width="420"
         height="315"
         src="https://www.youtube.com/embed/HvPTSZl2WCc"
