@@ -20,7 +20,7 @@
 /* (https://css-tricks.com/license/ allows uncredited use for any purpose) */
 
 .animate {
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-fill-mode: backwards;
 }
 
@@ -32,6 +32,7 @@
 
 .animate.fade {
   animation-name: animate-fade;
+  animation-duration: 0.55s;
   animation-timing-function: ease-in-out;
 }
 
@@ -56,6 +57,8 @@
 
 .animate.slide-up {
   animation-name: animate-slide-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes animate-slide-up {
