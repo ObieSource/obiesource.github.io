@@ -15,3 +15,77 @@
   --color-text-alt: #ff6631;
   --color-text-alt-light: #f8c8ac;
 }
+
+/* animations from https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
+/* (https://css-tricks.com/license/ allows uncredited use for any purpose) */
+
+.animate {
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .animate {
+    animation: none !important;
+  }
+}
+
+.animate.fade {
+  animation-name: animate-fade;
+  animation-duration: 0.55s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.6s;
+}
+.delay-2 {
+  animation-delay: 1s;
+}
+.delay-3 {
+  animation-delay: 1.4s;
+}
+
+.animate.slide-up {
+  animation-name: animate-slide-up;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate-slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.animate.flip {
+  animation-name: animate-flip;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation-duration: 0.5s;
+}
+
+@keyframes animate-flip {
+  0% {
+    opacity: 0;
+    transform: rotateX(-120deg) scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1, 1);
+  }
+}

@@ -25,8 +25,12 @@ const Projects = () => {
   return (
     <div className="obs__projects">
       <div className="obs__projects-container">
-        {projects.map((project) => (
-          <div className="obs__projects-project" key={project.name}>
+        {projects.map((project, index) => (
+          <div
+            className="obs__projects-project animate flip"
+            key={project.name}
+            style={{ animationDelay: 2 + index * 0.25 + "s" }}
+          >
             <div className="obs__projects-project-heading">
               <div className="obs__projects-project-heading-title">
                 <a href={project.html_url}>{project.name}</a>
