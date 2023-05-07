@@ -18,13 +18,13 @@ const Members = () => {
       <h2>Club Officers</h2>
       <ul className="diroff">
         {members.officers.map((officer) => (
-          <Member name={officer.name} />
+          <Member name={officer.name} key={officer.name} />
         ))}
       </ul>
       <h2>Members</h2>
       <ul className="dirmem">
         {members.members.map((member) => (
-          <Member name={member.name} />
+          <Member name={member.name} key={member.name} />
         ))}
       </ul>
     </main>

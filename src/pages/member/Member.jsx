@@ -8,7 +8,7 @@ const Socials = ({ socials }) => {
   return (
     <ul>
       {socials.map((url) => (
-        <li>
+        <li key={url}>
           <a href={url}>{url}</a>
         </li>
       ))}
