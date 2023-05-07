@@ -1,0 +1,14 @@
+{
+  "name": "Jasper Thomas-Yount",
+  "pronouns": "he/him/his",
+  "class": "'26",
+  "socials": ["https://github.com/zivoric"],
+  "bio": "I'm a first-year student intending to major in Computer Science. Other than CS, I also am studying Chinese and I play the viola.",
+  "projects": [
+    {
+      "name": "ZEnchantmentCore",
+      "description": "Minecraft plugin that adds custom enchantments",
+      "website": "https://github.com/zivoric/ZEnchantmentCore"
+    }
+  ]
+}

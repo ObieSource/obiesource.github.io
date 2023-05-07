@@ -1,0 +1,18 @@
+{
+  "name": "William Knowles-Kellett",
+  "status": "officer",
+  "pronouns": "he/him/his",
+  "class": "'23",
+  "socials": [
+    "https://github.com/wknowleskellett",
+    "https://williamknowleskellett.dev/"
+  ],
+  "bio": "Hi, I'm William. I'm a Math and Computer Science major. I've been trying to improve how knowledge is passed down among students in the CS department, through ObieSource and improvements to lab helping and the CS Majors committee.",
+  "projects": [
+    {
+      "name": "My Website",
+      "description": "I use my website as a home for the public facing version of anything I work on. I wrote the HTML/CSS/JS myself from scratch. Other than as an exercise, I don't recommend it.",
+      "website": "https://williamknowleskellett.dev/"
+    }
+  ]
+}

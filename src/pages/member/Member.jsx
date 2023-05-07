@@ -1,6 +1,6 @@
 import React from "react";
 import "./member.css";
-import members from "../../members.json";
+import members from "../../members";
 import { useParams } from "react-router-dom";
 
 const Socials = ({ socials }) => {
@@ -32,8 +32,8 @@ const Projects = ({ projects }) => {
 const Member = () => {
   const { name } = useParams();
   const member =
-    members.members.find((member) => member.name === name) ||
-    members.officers.find((officer) => officer.name === name);
+    members.find((member) => member.name === name) ||
+    members.find((officer) => officer.name === name);
   if (!member) {
     return (
       <main className="content color__text">Member not found: {name}</main>
