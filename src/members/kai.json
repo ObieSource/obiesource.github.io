@@ -1,0 +1,17 @@
+{
+  "name": "Kai Monno",
+  "pronouns": "he/ him/ his",
+  "class": "'26",
+  "socials": [
+    "https://www.instagram.com/kaimonno/",
+    "https://www.facebook.com/kai.monno.92/"
+  ],
+  "bio": "Hello, I am Kai Monno I am a first year computer science major. I plan to get very involved in the obiesource club!",
+  "projects": [
+    {
+      "name": "My Github",
+      "description": "This is my github.",
+      "website": "https://github.com/KaiMonno"
+    }
+  ]
+}

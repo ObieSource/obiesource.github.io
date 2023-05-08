@@ -1,0 +1,14 @@
+{
+  "name": "Nghi Nguyen",
+  "pronouns": "he/him/his",
+  "class": "'24",
+  "socials": ["https://github.com/nghi01"],
+  "bio": "Hello! I'm a 3rd year Computer Science major, Philosophy Minor. My favorite game is Dark Souls III, favorite book is Kokoro by Natsume Souseki. I also like touching grass.",
+  "projects": [
+    {
+      "name": "MazeGame",
+      "description": "I made a maze exploration game with some friends in Unreal Engine. Still under development though.",
+      "website": "https://github.com/bucket420/MazeGame"
+    }
+  ]
+}

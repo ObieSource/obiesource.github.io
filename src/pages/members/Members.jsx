@@ -1,6 +1,6 @@
 import React from "react";
 import "./members.css";
-import members from "../../members.json";
+import members from "../../members";
 import { Link } from "react-router-dom";
 
 const Member = ({ name }) => {
@@ -17,15 +17,19 @@ const Members = () => {
       <h1>Obiesource Members Directory</h1>
       <h2>Club Officers</h2>
       <ul className="diroff">
-        {members.officers.map((officer) => (
-          <Member name={officer.name} key={officer.name} />
-        ))}
+        {members
+          .filter((member) => member.status === "officer")
+          .map((member) => (
+            <Member name={member.name} key={member.name} />
+          ))}
       </ul>
       <h2>Members</h2>
       <ul className="dirmem">
-        {members.members.map((member) => (
-          <Member name={member.name} key={member.name} />
-        ))}
+        {members
+          .filter((member) => member.status !== "officer")
+          .map((member) => (
+            <Member name={member.name} key={member.name} />
+          ))}
       </ul>
     </main>
   );
