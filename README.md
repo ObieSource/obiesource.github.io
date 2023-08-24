@@ -94,11 +94,12 @@ At the top of this page is a "fork" button. Click this button to make a personal
 2. Run the following commands:
    ```sh
    git status
-   # In the output of git status, you should see that you're in the branch new-member and
+   # In the output of `git status`, you should see that you're in the branch new-member and
    # that src/members/{your-name}.json has been changed.
    # Let's add that file so we can commit it to the git repository.
    git add src/members/{your-name}.json
-   # If you run git status again here, you should see that src/members/{your-name}.json is ready to be committed.
+   # If you run `git status` again here, you should see that
+   # src/members/{your-name}.json is ready to be committed.
    # So let's commit it:
    git commit -m "Adding myself to the members list"
    # Then push it up to the new-member branch in your fork of the website.
