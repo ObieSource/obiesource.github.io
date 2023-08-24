@@ -66,7 +66,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 ## Step 5: Test your changes:
 
-**NOTE**: This is the step that relies on you having Node.js installed.
+**NOTE**: This is the step that relies on you having Node.js installed from step 2.
 
 1. In your terminal, navigate to the `obiesource.github.io/` directory.
 2. Run the following command to install the JavaScript dependencies that this project requires (e.g. React.js):
