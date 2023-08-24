@@ -108,7 +108,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
    # since you don't yet have a branch called new-member in your fork.
    # Let's follow git's suggestion from the error message to confirm that
    # you want to associate this local new-member branch with your fork's new-member branch.
-   # (origin means your fork.)
+   # (By default, "origin" is the GitHub repository you cloned from. In this case, that's your fork.)
    git push --set-upstream origin new-member
    ```
 
