@@ -1,18 +1,20 @@
 # Contribution Guide
 
+Please feel free to ask us for help in the Discord or in person!
+And if you think this guide can be improved, please tell us -- or make the changes yourself in a pull request by clicking the pencil icon a little above this paragraph and to the right.
+
 ## Step 1: Set up Git:
 
 Follow this guide for "Setting up Git" and "Authenticating with GitHub from Git":
-https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#setting-up-git.
+<https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#setting-up-git>.
 This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
 
 ## Step 2: Set up Node.js
 
-Node.js is a way to run JavaScript from outside of a Web browser. You need it in order to preview the website and make sure changes worked.
+Node.js is a way to run JavaScript from outside of a Web browser. You'll need it in order to preview the website with your changes.
+Install Node.js from here: <https://nodejs.org/en/download>.
 
 **NOTE:** It is possible to skip this step if you're making a small change, but once you start making larger contributions, you'll want to be able to check that your changes actually worked.
-
-Install Node.js from here: <https://nodejs.org/en/download>.
 
 To check whether you have Node set up right, open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows). Type the command `node -v`. If it prints a version number (e.g. `v18.17.1`), it's working. If it prints something like `command not found`, it's not working.
 
@@ -25,7 +27,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. Navigate to your forked repository
    - If github doesn't automatically take you there, you can click your avatar in the top right corner > Your repositories > obiesource.github.io
-2. Click Code, and copy the link
+2. Click Code. Click on either HTTPS or SSH, depending on which you chose in [Authenticating with GitHub from Git](https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#authenticating-with-github-from-git) in step 1. Copy the link.
 3. Open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows)
 4. Navigate to where you want to store the repository locally.
 
@@ -34,26 +36,33 @@ At the top of this page is a "fork" button. Click this button to make a personal
    - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
    - `ls` (_**l**i**s**t_) lists the files in the current directory.
    - `cd` (_**c**hange **d**irectory_) moves between directories.
-     - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource`.
-       If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource`.
-     - If you're currently in `/Users/william/Documents/code/obiesource`, press
+     - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource/`.
+       If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
+     - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
 
-5. Enter the following command in your terminal:
+5. Enter the following command in your terminal. (Don't actually include the curly braces `{}`.)
    ```sh
    git clone {the-link-you-copied}
    ```
-6. Make a new branch:
+6. Make a new branch in git:
+
    - enter the following commands:
+
      ```sh
-     git switch --create new-member
+     git switch -c new-member
      ```
-     This creates a new branch in git called `new-member` and switches to it. (It's a shorthand for running `git branch new-member` and then `git switch new-member`.) To learn more about git, come to one of our git/GitHub workshops!
+
+     This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
+
+     So this command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
+
+   - **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
 ## Step 4: Make changes:
 
-1. Navigate to the folder `obiesource.github.io/members`
-2. Make a copy of template.json
-3. Rename the copy {your-name}.json
+1. Navigate to the folder `obiesource.github.io/src/members`
+2. Make a copy of `_template.json`
+3. Rename the copy `{your-name}.json`
 4. Edit the document with your own personal information using a text editor. (I recommend [Visual Studio Code](https://code.visualstudio.com/).) All fields other than "name" are optional (just delete them to remove them from the page).
 
 ## Step 5: Test your changes:
@@ -97,7 +106,8 @@ A pull request is a request to have the changes from your forked repository adde
 
 1. Open your forked repository in github.
 2. Above your files should be a message that says "This branch is 1 commit ahead of ObieSource/obiesource.github.io:main."
-   - If the message says "This branch is X commits _behind_ ObieSource/...:main", click Fetch Upstream > Fetch and Merge
+   <!-- - If the message says "This branch is X commits _behind_ ObieSource/...:main", click Fetch Upstream > Fetch and Merge -->
+   <!-- ^ I don't think this should be necessary. And if there is a merge conflict for some reason, we can help people deal with it once they submit the PR. -->
 3. Click Contribute > Open pull request > Create pull request
 4. Now just wait! We'll review the additions and either give you feedback or accept the request!
 
