@@ -14,7 +14,7 @@ This is the hardest part, and we recommend doing so in club so that we can answe
 Node.js is a way to run JavaScript from outside of a Web browser. You'll need it in order to preview the website with your changes.
 Install Node.js from here: <https://nodejs.org/en/download>.
 
-**NOTE:** It is possible to skip this step if you're making a small change, but once you start making larger contributions, you'll want to be able to check that your changes actually worked.
+> **NOTE:** It is possible to skip this step if you're making a small change, but once you start making larger contributions, you'll want to be able to check that your changes actually worked.
 
 To check whether you have Node set up right, open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows). Type the command `node -v`. If it prints a version number (e.g. `v18.17.1`), it's working. If it prints something like `command not found`, it's not working.
 
@@ -31,14 +31,13 @@ At the top of this page is a "fork" button. Click this button to make a personal
 3. Open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows)
 4. Navigate to where you want to store the repository locally.
 
-   If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
-
-   - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
-   - `ls` (_**l**i**s**t_) lists the files in the current directory.
-   - `cd` (_**c**hange **d**irectory_) moves between directories.
-     - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource/`.
-       If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
-     - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
+   > If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
+   > - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
+   > - `ls` (_**l**i**s**t_) lists the files in the current directory.
+   > - `cd` (_**c**hange **d**irectory_) moves between directories.
+   >   - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource/`.
+   >     If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
+   >   - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
 
 5. Enter the following command in your terminal. (Don't actually include the curly braces `{}`.)
    ```sh
@@ -52,11 +51,11 @@ At the top of this page is a "fork" button. Click this button to make a personal
      git switch -c new-member
      ```
 
-     This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
+     > This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
 
-     So this command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
+     This command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
 
-   - **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
+     > **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
 ## Step 4: Make changes:
 
@@ -80,24 +79,36 @@ At the top of this page is a "fork" button. Click this button to make a personal
    ```
 4. In your favorite web browser, navigate to the local URL listed in the output of `npm start` (probably something like <http://localhost:3000> or <http://127.0.0.1:8000/>).
 
-   **Troubleshooting:**
-
-   - If there's an error in the terminal,
-   - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
-   - If you forget the "name" field, you'll see an error in the members list page itself.
+   > **Troubleshooting:**
+   > - If there's an error in the terminal,
+   > - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
+   > - If you forget the "name" field, you'll see an error in the members list page itself.
 
 5. You should see a link that includes your name. Click on it.
 6. You should see a page with all your information on it!
-   - If you see an error message, try to fix the error in `src/members/{your-name}.json`.
+   > **Troubleshooting:** If you see an error message, try to fix the error in `src/members/{your-name}.json`.
 
 ## Step 6: Push the repository:
 
 1. In your terminal, navigate to `obiesource.github.io/`
 2. Run the following commands:
    ```sh
+   git status
+   # In the output of git status, you should see that you're in the branch new-member and
+   # that src/members/{your-name}.json has been changed.
+   # Let's add that file so we can commit it to the git repository.
    git add src/members/{your-name}.json
+   # If you run git status again here, you should see that src/members/{your-name}.json is ready to be committed.
+   # So let's commit it:
    git commit -m "Adding myself to the members list"
+   # Then push it up to the new-member branch in your fork of the website.
    git push
+   # At this point, you'll probably get an error message from git.
+   # since you don't yet have a branch called new-member in your fork.
+   # Let's follow git's suggestion from the error message to confirm that
+   # you want to associate this local new-member branch with your fork's new-member branch.
+   # (origin means your fork.)
+   git push --set-upstream origin new-member
    ```
 
 ## Step 7: Make a pull request
