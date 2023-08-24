@@ -1,75 +1,93 @@
-NOTE: This README is out of date and we're working on fixing it. If you want help contributing in the near future, please ask us!
-
 # Contribution Guide
 
-### A step by step guide to how to add yourself to the members list on the website
+## Step 1: Set up Git:
 
-A video version of this guide can be found here: https://spectra.video/w/grq4Zr6rofFbef5di5iSqa
-
-## Step 1: Set up Git (and Python):
-
-Follow this guide for help setting it up:
-https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git
+Follow this guide for "Setting up Git" and "Authenticating with GitHub from Git":
+https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#setting-up-git.
 This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
 
-After you have set up git, check to see whether you have Python installed on your computer by running in your terminal the following command: 
-```sh
-python --version
-```
-If you receive an error, then you need to install python. Do so by running the following command in your terminal: > python
+## Step 2: Set up Node.js
 
-## Step 2: Fork the repository:
+Node.js is a way to run JavaScript from outside of a Web browser. You need it in order to preview the website and make sure changes worked.
 
-A fork is a personal copy of someone else's repository. You can make whatever changes you want without messing up anyone else's work.
+**NOTE:** It is possible to skip this step if you're making a small change, but once you start making larger contributions, you'll want to be able to check that your changes actually worked.
+
+Install Node.js from here: <https://nodejs.org/en/download>.
+
+To check whether you have Node set up right, open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows). Type the command `node -v`. If it prints a version number (e.g. `v18.17.1`), it's working. If it prints something like `command not found`, it's not working.
+
+## Step 3: Fork the repository:
+
+A fork is your personal copy of someone else's repository on GitHub. You can make whatever changes you want without messing up anyone else's work.
 At the top of this page is a "fork" button. Click this button to make a personal copy of the obiesource website repository.
 
-## Step 3: Clone the repository locally:
+## Step 4: Clone the repository locally:
 
 1. Navigate to your forked repository
-   - If github doesn't automatically take you there, you can click your avatar in the top right corner > My repositories > obiesource.github.io
+   - If github doesn't automatically take you there, you can click your avatar in the top right corner > Your repositories > obiesource.github.io
 2. Click Code, and copy the link
-3. Open a terminal on your computer (e.g. Command Prompt for Windows)
-4. Navigate to where you want to store the repository locally
+3. Open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows)
+4. Navigate to where you want to store the repository locally.
+
+   If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
+
+   - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
+   - `ls` (_**l**i**s**t_) lists the files in the current directory.
+   - `cd` (_**c**hange **d**irectory_) moves between directories.
+     - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource`.
+       If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource`.
+     - If you're currently in `/Users/william/Documents/code/obiesource`, press
+
 5. Enter the following command in your terminal:
    ```sh
    git clone {the-link-you-copied}
    ```
-6. Make a new branch (optional):
+6. Make a new branch:
    - enter the following commands:
-      ```sh
-      git checkout -b new-member
-      ```
+     ```sh
+     git switch --create new-member
+     ```
+     This creates a new branch in git called `new-member` and switches to it. (It's a shorthand for running `git branch new-member` and then `git switch new-member`.) To learn more about git, come to one of our git/GitHub workshops!
 
 ## Step 4: Make changes:
 
-1. Navigate to .../obiesource.github.io/members
+1. Navigate to the folder `obiesource.github.io/members`
 2. Make a copy of template.json
-3. Rename the copy {your-last-name}.json
-4. Edit the document with your own personal information. All fields are optional (just delete them to remove them from the page)
-5. Edit memberslist.json, and add yourself to the members field
-   - the addition should look like this: `{"name": "Your Name", "href": "/member.html?{your-last-name}"}`
-   - correct spelling and quotation and comma placement are very imporant
+3. Rename the copy {your-name}.json
+4. Edit the document with your own personal information using a text editor. (I recommend [Visual Studio Code](https://code.visualstudio.com/).) All fields other than "name" are optional (just delete them to remove them from the page).
 
 ## Step 5: Test your changes:
 
-1. In your terminal, navigate to .../obiesource.github.io/
-2. Run the following command:
+**NOTE**: This is the step that relies on you having Node.js installed.
+
+1. In your terminal, navigate to the `obiesource.github.io/` directory.
+2. Run the following command to install the JavaScript dependencies that this project requires (e.g. React.js):
    ```sh
-   python3 -m http.server --bind 127.0.0.1 8000
+   npm install
    ```
-3. In your favorite web browser, navigate to <http://127.0.0.1:8000/>. Click the link to the members directory.
-4. You should see a page that includes your name. Click on it.
-   - If you don't see your name, check the spelling, quotations, and commas in your entry in memberslist.json
-5. You should see a page with all your information on it!
-   - If you see an error message, try to fix the error in members/{your-last-name}.json
+3. Run the following command to start the development server:
+   ```sh
+   npm start
+   ```
+4. In your favorite web browser, navigate to the local URL listed in the output of `npm start` (probably something like <http://localhost:3000> or <http://127.0.0.1:8000/>).
+
+   **Troubleshooting:**
+
+   - If there's an error in the terminal,
+   - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
+   - If you forget the "name" field, you'll see an error in the members list page itself.
+
+5. You should see a link that includes your name. Click on it.
+6. You should see a page with all your information on it!
+   - If you see an error message, try to fix the error in `src/members/{your-name}.json`.
 
 ## Step 6: Push the repository:
 
-1. In your terminal, navigate to .../obiesource.github.io/
+1. In your terminal, navigate to `obiesource.github.io/`
 2. Run the following commands:
    ```sh
-   git add members/{your-last-name}.json memberslist.json  
-   git commit -m "Adding myself to the members list"  
+   git add src/members/{your-name}.json
+   git commit -m "Adding myself to the members list"
    git push
    ```
 
@@ -83,16 +101,19 @@ A pull request is a request to have the changes from your forked repository adde
 3. Click Contribute > Open pull request > Create pull request
 4. Now just wait! We'll review the additions and either give you feedback or accept the request!
 
+---
 
-# Getting Started with Create React App
+## Getting Started with Create React App
+
+> **NOTE**: [Create React App](https://create-react-app.dev/) is the tool we used to create the current version of the website. The rest of this page is the documentation that was added automatically by Create React App.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -100,12 +121,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -115,7 +136,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -125,32 +146,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### Analyzing the Bundle Size
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#### Making a Progressive Web App
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+#### Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+#### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
