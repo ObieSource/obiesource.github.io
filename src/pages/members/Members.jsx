@@ -3,7 +3,17 @@ import "./members.css";
 import members from "../../members";
 import { Link } from "react-router-dom";
 
-const Member = ({ name }) => {
+const MemberLink = ({ member: { name, filename } }) => {
+  if (name == null) {
+    return (
+      <li>
+        <strong class="invalid-member">
+          The member in the file <code>{filename}</code> doesn't have a "name"
+          attribute!
+        </strong>
+      </li>
+    );
+  }
   return (
     <li>
       <Link to={name}>{name}</Link>
@@ -20,7 +30,7 @@ const Members = () => {
         {members
           .filter((member) => member.status === "officer")
           .map((member) => (
-            <Member name={member.name} key={member.name} />
+            <MemberLink member={member} key={member.filename} />
           ))}
       </ul>
       <h2>Members</h2>
@@ -28,7 +38,7 @@ const Members = () => {
         {members
           .filter((member) => member.status !== "officer")
           .map((member) => (
-            <Member name={member.name} key={member.name} />
+            <MemberLink member={member} key={member.filename} />
           ))}
       </ul>
     </main>
