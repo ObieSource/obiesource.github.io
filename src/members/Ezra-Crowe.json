@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "Ezra Crowe",
   "pronouns": "he/him/",
   "class": "'26",

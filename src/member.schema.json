@@ -1,0 +1,58 @@
+{
+  "$comment": "This is the JSON Schema (http://json-schema.org) for a club member file in the members/ directory. It can be used to validate the members files or just for good autocomplete and hints in editors like VS Code.",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "description": "VSCode uses this to provide autocomplete for the schema (see https://code.visualstudio.com/docs/languages/json#_mapping-in-the-json)",
+      "type": "string"
+    },
+    "status": {
+      "description": "Whether you're a member or a club officer",
+      "enum": ["member", "officer"],
+      "default": "member"
+    },
+    "name": { "description": "Your name", "type": "string" },
+    "pronouns": { "description": "Your pronouns", "type": "string" },
+    "class": {
+      "description": "Your class year. For example, if you'll graduate in 2027, this should be \"'27\".",
+      "type": "string",
+      "default": "'27",
+      "examples": ["'24", "'25", "'26", "'27", "'28", "'29", "'30", "'31"]
+    },
+    "socials": {
+      "description": "An array with links to any social media accounts you want to share",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "bio": {
+      "description": "Write something about yourself here!",
+      "type": "string",
+      "examples": [
+        "Hello! I'm a 6th year Geography major with a concentration in Computer Science. I like sticks and rocks and mud."
+      ]
+    },
+    "projects": {
+      "description": "An array of projects you've worked on or are working on that you want to share",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "description", "website"],
+        "minProperties": 1
+      }
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false
+}

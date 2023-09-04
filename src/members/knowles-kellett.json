@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "William Knowles-Kellett",
   "status": "officer",
   "pronouns": "he/him/his",

@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "Nghi Nguyen",
   "pronouns": "he/him/his",
   "class": "'24",

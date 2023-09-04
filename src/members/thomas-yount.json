@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "Jasper Thomas-Yount",
   "pronouns": "he/him/his",
   "class": "'26",

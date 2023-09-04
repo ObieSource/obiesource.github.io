@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "Ike Osenberg",
   "status": "officer",
   "pronouns": "he/him/his or they/them/theirs",

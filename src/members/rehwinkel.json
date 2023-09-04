@@ -1,4 +1,5 @@
 {
+  "$schema": "../member.schema.json",
   "name": "William Rehwinkel",
   "pronouns": "he/him/his",
   "class": "'24",
