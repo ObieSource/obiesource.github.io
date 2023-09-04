@@ -8,8 +8,8 @@
       "type": "string"
     },
     "status": {
-      "description": "Whether you're a member or a club officer",
-      "enum": ["member", "officer"],
+      "description": "Whether you're a member, a club officer, or an alum",
+      "enum": ["member", "officer", "alum"],
       "default": "member"
     },
     "name": { "description": "Your name", "type": "string" },

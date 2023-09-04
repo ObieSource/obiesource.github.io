@@ -1,7 +1,7 @@
 {
   "$schema": "../member.schema.json",
   "name": "Ike Osenberg",
-  "status": "officer",
+  "status": "alum",
   "pronouns": "he/him/his or they/them/theirs",
   "class": "'23",
   "socials": ["https://github.com/iosenberg"],

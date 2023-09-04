@@ -36,7 +36,17 @@ const Members = () => {
       <h2>Members</h2>
       <ul className="dirmem">
         {members
-          .filter((member) => member.status !== "officer")
+          .filter(
+            (member) => member.status === "member" || member.status == null
+          )
+          .map((member) => (
+            <MemberLink member={member} key={member.filename} />
+          ))}
+      </ul>
+      <h2>Alumni</h2>
+      <ul className="diralum">
+        {members
+          .filter((member) => member.status === "alum")
           .map((member) => (
             <MemberLink member={member} key={member.filename} />
           ))}
