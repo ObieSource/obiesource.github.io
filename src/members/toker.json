@@ -1,6 +1,7 @@
 {
   "$schema": "../member.schema.json",
   "name": "Ben Toker",
+  "status": "officer",
   "pronouns": "he/him/his",
   "class": "Class of 2026",
   "socials": ["https://instagram.com/tenboker"],

@@ -1,6 +1,7 @@
 {
   "$schema": "../member.schema.json",
   "name": "Kai Monno",
+  "status": "officer",
   "pronouns": "he/ him/ his",
   "class": "'26",
   "socials": [

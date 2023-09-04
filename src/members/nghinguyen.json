@@ -1,6 +1,7 @@
 {
   "$schema": "../member.schema.json",
   "name": "Nghi Nguyen",
+  "status": "officer",
   "pronouns": "he/him/his",
   "class": "'24",
   "socials": ["https://github.com/nghi01"],

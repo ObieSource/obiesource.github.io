@@ -1,6 +1,7 @@
 {
   "$schema": "../member.schema.json",
   "name": "Ezra Crowe",
+  "status": "officer",
   "pronouns": "he/him/",
   "class": "'26",
   "socials": [
