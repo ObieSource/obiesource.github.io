@@ -31,8 +31,8 @@ const router = createBrowserRouter(
       <Route path="/members/:name" element={<Member />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resources" element={<Resources />} />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 const App = () => {

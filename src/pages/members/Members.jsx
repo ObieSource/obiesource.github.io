@@ -37,7 +37,7 @@ const Members = () => {
       <ul className="dirmem">
         {members
           .filter(
-            (member) => member.status === "member" || member.status == null
+            (member) => member.status === "member" || member.status == null,
           )
           .map((member) => (
             <MemberLink member={member} key={member.filename} />

@@ -13,7 +13,7 @@ const Projects = () => {
 
       // set state when the data received
       setProjects(
-        data.sort((a, b) => b.updated_at.localeCompare(a.updated_at))
+        data.sort((a, b) => b.updated_at.localeCompare(a.updated_at)),
       );
     };
 

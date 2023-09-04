@@ -9,12 +9,12 @@ function importAll(memberRequirer) {
     const data = memberRequirer(filename);
     if (typeof data !== "object") {
       throw new Error(
-        `The file ${filename} must export a JSON object. Instead we got a JSON ${typeof data}.`
+        `The file ${filename} must export a JSON object. Instead we got a JSON ${typeof data}.`,
       );
     }
     if (data === null) {
       throw new Error(
-        `The file ${filename} must export a JSON object. Instead we got null.`
+        `The file ${filename} must export a JSON object. Instead we got null.`,
       );
     }
     members.push({

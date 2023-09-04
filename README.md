@@ -32,6 +32,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 4. Navigate to where you want to store the repository locally.
 
    > If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
+   >
    > - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
    > - `ls` (_**l**i**s**t_) lists the files in the current directory.
    > - `cd` (_**c**hange **d**irectory_) moves between directories.
@@ -80,6 +81,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 4. In your favorite web browser, navigate to the local URL listed in the output of `npm start` (probably something like <http://localhost:3000> or <http://127.0.0.1:8000/>).
 
    > **Troubleshooting:**
+   >
    > - If there's an error in the terminal,
    > - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
    > - If you forget the "name" field, you'll see an error in the members list page itself.
