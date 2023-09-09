@@ -4,26 +4,33 @@ import "./introduction.css";
 const Introduction = () => {
   return (
     <div className="obs__introduction">
-      <div className="obs__introduction-heading animate fade">
-        <h1>Where developers build together</h1>
-      </div>
-      <div className="obs__introduction-description__container">
-        <div className="obs__introduction-description-buls">
-          <div className="obs__introduction-description description_first-bul animate slide-up delay-1">
-            <h3>Find your people</h3>
-            <p>
-              Members can present about their projects and find their teammates.
-            </p>
-          </div>
-          <div className="obs__introduction-description description_third-bul animate slide-up delay-2">
-            <h3>Develop your skills</h3>
-            <p>
-              Hone your collaboration skills, as well as learn new technologies.
-            </p>
-          </div>
-          <div className="obs__introduction-description description_second-bul animate slide-up delay-3">
-            <h3>Contribute to projects</h3>
-            <p>Hop in the development of an in-progress project.</p>
+      <div className ="obs__introduction-terminal">
+        <div className = "obs__introduction-terminal-buttons__container">
+          <div className="obs__introduction-terminal-buttons red"></div>
+          <div className="obs__introduction-terminal-buttons amber"></div>
+          <div className="obs__introduction-terminal-buttons green"></div>
+        </div>
+        <div className="obs__introduction-terminal-body">
+          <h1 className="obs__introduction-heading anim-typewriter">WHERE DEVELOPERS <br></br>BUILD TOGETHER</h1>
+          <div className="obs__introduction-description__container">
+            <div className="obs__introduction-description-buls">
+              <div className="obs__introduction-description animate hide-1">
+                <h3>Find your people</h3>
+                <p>
+                  () =&gt; &#123;Members can present about their projects and find their teammates.&#125;
+                </p>
+              </div>
+              <div className="obs__introduction-description animate show-1 hide">
+                <h3>Develop your skills</h3>
+                <p>
+                () =&gt; &#123;Hone your collaboration skills, as well as learn new technologies.&#125;
+                </p>
+              </div>
+              <div className="obs__introduction-description animate show-2">
+                <h3>Contribute to projects</h3>
+                <p>() =&gt; &#123;Hop in the development of an in-progress project.&#125;</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
