@@ -1,7 +1,6 @@
 .obs__projects {
   width: 100%;
-  padding: 2rem 6rem;
-  color: white;
+  padding: 3rem 6rem;
   background-color: var(--color-foreground);
 }
 
@@ -22,12 +21,13 @@
   min-width: 0px;
 }
 
+
 .obs__projects-project {
   display: inline-block;
   padding: 2rem 1.8rem;
-  width: 36rem;
   background-color: var(--color-foreground-2);
   border-radius: 7px;
+  flex:1;
 }
 
 .obs__projects-project-heading {

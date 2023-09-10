@@ -30,6 +30,7 @@
     --color-muted: #71717A;
     --color-accent: #3B82F6;
     --color-txt: #F4F4F5;
+    --color-accent-alt: #ff6631;
 
   
 }
@@ -170,4 +171,19 @@
       height:0;
       visibility:hidden;
   }
+}
+
+.emph-text {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.link-text{
+  color: var(--color-accent);
+  text-decoration: underline;
+
+}
+
+a:hover{
+  color: var(--color-accent-alt);
 }

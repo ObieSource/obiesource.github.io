@@ -27,6 +27,8 @@
 
 .obs__navbar-links_logo a {
   text-decoration: none;
+  color: var(--color-txt);
+
 }
 
 .obs__navbar-links_container {
@@ -46,7 +48,7 @@
 
 }
 
-.obs__navbar-links_logo a:hover,
+.obs__navbar-links_logo a:hover ,
 .obs__navbar-links_container a:hover {
   color: var(--color-accent);
 }
