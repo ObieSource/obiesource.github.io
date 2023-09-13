@@ -1,0 +1,16 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Ajai Nelson",
+  "status": "officer",
+  "pronouns": "he/him/his",
+  "class": "'25",
+  "socials": ["https://github.com/AjaiKN/", "https://ajai.dev/"],
+  "bio": "Hi, I'm Ajai! My hobbies include worrying that someone will ask me to write a description of myself.",
+  "projects": [
+    {
+      "name": "OPrestissimo",
+      "description": "A student-run alternative course catalog / schedule of classes for Oberlin. It was made 10 years ago by other students, and I'm the current maintainer. Let me know if you want to help!",
+      "website": "https://oprestissimo.com/"
+    }
+  ]
+}
