@@ -1,10 +1,10 @@
 import React from "react";
-import {AboutTerminal, AboutMore, Members} from "../../components"
+import {Terminal, AboutMore, Members} from "../../components"
 
 const About = () => {
   return (
     <div id="about">
-      <AboutTerminal/>
+      <Terminal heading="About"/>
       <AboutMore/>
       <Members/>
     </div>

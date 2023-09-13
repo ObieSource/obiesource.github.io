@@ -72,7 +72,10 @@ const Projects = () => {
                           </div>
                         </div>
                         <div className="obs__projects-project-heading-description">
-                          {project.description}
+                          {project.description.indexOf(' Project') != -1 ? project.description.substring(0, project.description.indexOf(' Project')) : project.description}
+                          <div className="obs__projects-project-heading-description-leader">
+                          {project.description.indexOf(' Project') == -1 ? "" : project.description.substring(project.description.indexOf(' Project') + 9)}
+                          </div>
                         </div>
                     </div>
                   )

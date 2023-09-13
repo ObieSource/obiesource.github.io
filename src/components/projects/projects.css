@@ -5,7 +5,6 @@
 }
 
 .obs__projects-header {
-  color: var(--color-txt);
   font-family: var(--font-text-1);
   font-size: 30px;
   font-weight: 500;
@@ -52,11 +51,14 @@
 }
 
 .obs__projects-project-heading-status {
-  color: var(--color-bg-alt);
+  color: var(--color-accent-alt);
+}
+
+.obs__projects-project-heading-description-leader {
+  color: #606060
 }
 
 .obs__projects-project-heading-description {
-  color: var(--color-txt);
   font-family: var(--font-text-2);
   font-size: 16px;
   font-weight:500;

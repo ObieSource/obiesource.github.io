@@ -1,0 +1,50 @@
+.obs__contact-more {
+  width: 100%;
+  padding: 3rem 6rem 0rem 6rem;
+  background-color: var(--color-foreground);
+}
+
+.obs__contact-more-heading {
+  color: var(--color-txt);
+  font-family: var(--font-text-1);
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.obs__contact-more-description {
+  color: var(--color-txt);
+  font-family: var(--font-text-1);
+  font-size: 16px;
+  font-weight:400;
+  margin: 1.5em 3rem 0rem 3rem;
+  padding-bottom: 3rem;
+}
+
+.obs__contact-more-description h3 {
+  font-family: var(--font-text-1);
+  font-weight: 500;
+  font-size: 30px;
+  padding: 0 0 0.6rem 0;
+  color: var(--color-accent);
+}
+
+
+.obs__contact-more-description p {
+  font-family: var(--font-text-1);
+  font-size: 16px;
+  color: var(--color-txt);
+}
+
+
+@media screen and (max-width: 700px) {
+  .obs__contact-more {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .obs__contact-more {
+    padding: 2rem;
+  }
+}

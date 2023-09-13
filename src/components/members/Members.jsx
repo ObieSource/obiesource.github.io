@@ -21,7 +21,7 @@ const MemberLink = ({ member: { name, filename } }) => {
   );
 };
 
-const MemberCard = ({ member: { name, filename } }) => {
+const MemberCard = ({ member: { name, filename, bio } }) => {
   if (name == null) {
     return (
       <li>
@@ -36,16 +36,15 @@ const MemberCard = ({ member: { name, filename } }) => {
     <div
     className="obs__members-member animate flip"
     key={name}
-    // style={{ animationDelay: 2 + index * 0.25 + "s" }}
     >
       <div className="obs__members-member-heading">
         <div className="obs__members-member-heading-title">
-          <a href={name}>{name}</a>
+          {name}
         </div>
       </div>
-      {/* <div className="obs__members-member-heading-description"> */}
-        {/* {member.description} */}
-      {/* </div> */}
+      <div className="obs__members-member-heading-description">
+        {bio == "" ? "" : bio}
+      </div>
   </div>
   );
 };
@@ -53,8 +52,7 @@ const MemberCard = ({ member: { name, filename } }) => {
 const Members = () => {
   return (
     <main className="obs__members">
-
-         <div className="obs__members-heading">
+      <div className="obs__members-heading">
           &#123;Meet the team&#125;
         </div>
 
