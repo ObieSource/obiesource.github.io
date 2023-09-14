@@ -8,7 +8,7 @@ const MemberLink = ({ member: { name, filename } }) => {
   if (name == null) {
     return (
       <li>
-        <strong class="invalid-member">
+        <strong className="invalid-member">
           The member in the file <code>{filename}</code> doesn't have a "name"
           attribute!
         </strong>
@@ -29,7 +29,7 @@ const Members = () => {
       <div className="obs__members color__text">
         {/* <h2 className="obs__members-heading">&#123;Meet the team&#125;</h2> */}
         <div className="obs__members-description">
-          <div class="obs__members-columns">
+          <div className="obs__members-columns">
             <div>
               <h2 className="obs__members-heading">Club Officers</h2>
               <ul className="diroff">
