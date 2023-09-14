@@ -24,7 +24,6 @@ html,
   height: 100%;
   padding: 2rem 8rem;
   font-size: 20px;
-  background-color: #121212;
 }
 
 @media screen and (max-width: 768px) {
