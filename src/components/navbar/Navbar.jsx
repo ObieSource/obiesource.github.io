@@ -6,6 +6,20 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const links = (
+    <>
+      <p>
+        <Link to="/resources">Resources</Link>
+      </p>
+      <p>
+        <Link to="/contact">Contact</Link>
+      </p>
+      <p>
+        <Link to="/about">About</Link>
+      </p>
+    </>
+  );
+
   return (
     <div className="obs__navbar ">
       <div className="obs__navbar-links">
@@ -16,17 +30,7 @@ const Navbar = () => {
             </Link>
           </p>
         </div>
-        <div className="obs__navbar-links_container">
-          <p>
-            <Link to="/resources">Resources</Link>
-          </p>
-          <p>
-            <Link to="/contact">Contact</Link>
-          </p>
-          <p>
-            <Link to="/about">About</Link>
-          </p>
-        </div>
+        <div className="obs__navbar-links_container">{links}</div>
       </div>
       <div className="obs__navbar-menu">
         {toggleMenu ? (
@@ -44,17 +48,7 @@ const Navbar = () => {
         )}
         {toggleMenu && (
           <div className="obs__navbar-menu_container">
-            <div className="obs__navbar-menu_container-links">
-              <p>
-                <Link to="/about">About</Link>
-              </p>
-              <p>
-                <Link to="/members">Members</Link>
-              </p>
-              <p>
-                <Link to="/contact">Contact</Link>
-              </p>
-            </div>
+            <div className="obs__navbar-menu_container-links">{links}</div>
           </div>
         )}
       </div>

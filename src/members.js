@@ -5,6 +5,7 @@ const members = [];
 // and put their contents into the members array.
 function importAll(memberRequirer) {
   const filenames = memberRequirer.keys();
+  console.log(filenames);
   filenames.forEach((filename) => {
     const data = memberRequirer(filename);
     if (typeof data !== "object") {
@@ -26,6 +27,6 @@ function importAll(memberRequirer) {
   });
 }
 // import all json files in the members directory (except for _template.json)
-importAll(require.context("./members", true, /^[^_].*\.json$/));
+importAll(require.context("./members", true, /\/[^_][^/]+\.json$/));
 
 export default members;
