@@ -24,9 +24,6 @@ jobs:
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
-      - name: Use the token
-        run: |
-          gh api octocat
 
       - name: Checkout
         uses: actions/checkout@v3
