@@ -139,7 +139,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
      > This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
 
-     That command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
+     That command creates a new branch called `new-member` and switches to it.
 
      > **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
