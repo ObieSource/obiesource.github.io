@@ -14,7 +14,7 @@ const Projects = () => {
       const dataFiltered = [];
 
       for (let i = 0; i < data.length; i++) {
-        if (data[i].full_name != "ObieSource/.github") {
+        if (data[i].full_name !== "ObieSource/.github") {
           dataFiltered.push(data[i]);
         }
       }
@@ -43,12 +43,6 @@ const Projects = () => {
     dataFetch();
   }, []);
 
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
   if (!projects) return <div>Loading...</div>;
 
   return (
@@ -73,7 +67,7 @@ const Projects = () => {
               </div>
               <div className="obs__projects-project-heading-description">
                 {project.description != null
-                  ? project.description.indexOf(" Project") != -1
+                  ? project.description.indexOf(" Project") !== -1
                     ? project.description.substring(
                         0,
                         project.description.indexOf(" Project"),
@@ -82,7 +76,7 @@ const Projects = () => {
                   : ""}
                 <div className="obs__projects-project-heading-description-leader">
                   {project.description != null
-                    ? project.description.indexOf(" Project") == -1
+                    ? project.description.indexOf(" Project") === -1
                       ? ""
                       : project.description.substring(
                           project.description.indexOf(" Project") + 9,
