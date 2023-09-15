@@ -1,10 +1,10 @@
-.obs__introduction {
+.obs__terminal {
   background-color: var(--color-background);
   width: 100%;
   padding: 0rem 6rem 6rem 6rem;
 }
 
-.obs__introduction-terminal {
+.obs__terminal-terminal {
   background-color: var(--color-foreground);
   width: 100%;
   border-radius: 10px;
@@ -12,7 +12,7 @@
   /* justify-content: space-between; */
 }
 
-.obs__introduction-terminal-buttons__container {
+.obs__terminal-terminal-buttons__container {
   background-color: var(--color-foreground-2);
   width: 100%;
   padding: 0.5rem 1rem;
@@ -21,11 +21,11 @@
   /* justify-content: space-between; */
 }
 
-.obs__introduction-terminal-body {
+.obs__terminal-terminal-body {
   padding: 2rem 1.8rem;
-
+  text-align: center;
 }
-.obs__introduction-terminal-buttons {
+.obs__terminal-terminal-buttons {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -33,35 +33,41 @@
   margin-right: 0.7rem;
 
   &.red {
-    background: #FF6057;
-    border: 1px solid #E14640;
+    background: #ff6057;
+    border: 1px solid #e14640;
   }
 
   &.amber {
-    background: #FFBD2E;
-    border: 1px solid #DFA123;
+    background: #ffbd2e;
+    border: 1px solid #dfa123;
   }
 
   &.green {
-    background: #27C93F;
-    border: 1px solid #1DAD2B;
+    background: #27c93f;
+    border: 1px solid #1dad2b;
   }
 }
 
-.obs__introduction-heading {
+.obs__terminal-heading {
   font-family: var(--font-display);
   font-weight: 250;
   font-size: 92px;
   color: var(--color-txt);
 }
 
-.obs__introduction-description__container {
+@media screen and (max-width: 700px) {
+  .obs__terminal-heading {
+    font-size: 40px;
+  }
+}
+
+.obs__terminal-description__container {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.obs__introduction-description-buls {
+.obs__terminal-description-buls {
   margin: 1.3rem 0 0 0;
   display: flex;
   flex-direction: column;
@@ -70,13 +76,13 @@
   gap: 0.5rem;
 }
 
-.obs__introduction-description {
+.obs__terminal-description {
   min-width: 13rem;
   border-radius: 10px;
   width: 100%;
 }
 
-.obs__introduction-description h3 {
+.obs__terminal-description h3 {
   font-family: var(--font-text-1);
   font-weight: 500;
   font-size: 30px;
@@ -84,27 +90,20 @@
   color: var(--color-accent);
 }
 
-.obs__introduction-description p {
+.obs__terminal-description p {
   font-family: var(--font-text-1);
   font-size: 16px;
   color: var(--color-txt);
 }
 
-
 @media screen and (max-width: 700px) {
-  .obs__introduction-heading {
-    font-size: 40px;
-  }
-  .obs__introduction-description h3 {
-    font-size: 20px;
-  }
-  .obs__introduction {
+  .obs__terminal {
     padding: 2rem 4rem;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .obs__introduction {
+  .obs__terminal {
     padding: 2rem;
   }
 }

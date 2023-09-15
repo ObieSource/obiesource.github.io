@@ -10,7 +10,7 @@ const Socials = ({ socials }) => {
     !socials.every((social) => typeof social === "string")
   ) {
     return (
-      <p class="invalid-member">
+      <p className="invalid-member">
         The "socials" field must be an array of strings (URLs)! Instead, we got{" "}
         <code>{JSON.stringify(socials)}</code>.
       </p>
@@ -34,7 +34,7 @@ const Projects = ({ projects }) => {
     !projects.every((project) => typeof project === "object")
   ) {
     return (
-      <p class="invalid-member">
+      <p className="invalid-member">
         The "socials" field should be an array of objects with <code>name</code>
         , <code>website</code>, and <code>description</code> fields. Instead, we
         got <code>{JSON.stringify(projects)}</code>.

@@ -10,7 +10,7 @@ import {
 import "./App.css";
 
 import { Navbar } from "./components";
-import { Home, About, Contact, Members, Member, Resources } from "./pages";
+import { Home, About, Contact, Resources, Members, Member } from "./pages";
 
 const PageLayout = () => {
   return (
@@ -27,10 +27,10 @@ const router = createBrowserRouter(
     <Route element={<PageLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/members" element={<Members />} />
-      <Route path="/members/:name" element={<Member />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/members" element={<Members />} />
+      <Route path="/members/:name" element={<Member />} />
     </Route>,
   ),
 );

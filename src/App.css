@@ -7,12 +7,11 @@
 
 body {
   height: 100%;
-  background-color: var(--color-bg);
+  background-color: var(--color-foreground);
 }
 
 a {
-  color: unset;
-  text-decoration: none;
+  color: rgb(13, 110, 253);
 }
 
 html,
@@ -25,7 +24,7 @@ html,
   height: 100%;
   padding: 2rem 8rem;
   font-size: 20px;
-  background-color: #121212;
+  /* font-family: Helvetica, sans-serif; */
 }
 
 @media screen and (max-width: 768px) {

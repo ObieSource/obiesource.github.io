@@ -2,18 +2,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Fredoka+One&display=swap");
 
-:root {
-  /* --gradient-bar: linear-gradient(black, rgba(255, 0, 0, 0.787)); */
-  --font-family-text: "Open Sans", sans-serif;
-  --font-family-display: "Fira Mono", monospace;
-  --font-family-logo: "Fira Mono", monospace;
-  --font-family-heading: "Fredoka One", cursive;
-  --color-bg: #0d1117;
-  --color-bg-alt: #55843d;
-  --color-bg-alt-1: #5d4887;
-  --color-text: #ffffff;
-  --color-text-alt: #ff6631;
-  --color-text-alt-light: #f8c8ac;
+/* new fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+* {
+  color: var(--color-txt);
+}
+
+:root {  
+  /* new fonts */
+    --font-family-logo: "Fira Mono", monospace;
+    --font-display: 'Fira Sans Condensed', sans-serif;
+    --font-text-1: 'Fira Mono', monospace;
+    --font-text-2: 'Fira Code', monospace;
+
+    /* new color codes */
+    --color-background: #18181B;
+    --color-foreground: #27272A;
+    --color-foreground-2: #202022;
+    --color-muted: #71717A;
+    --color-accent: #3B82F6;
+    --color-txt: #F4F4F5;
+    --color-accent-alt: #ff6631;
+
+  
 }
 
 /* animations from https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/ */
@@ -79,6 +92,7 @@
   animation-duration: 0.5s;
 }
 
+
 @keyframes animate-flip {
   0% {
     opacity: 0;
@@ -88,4 +102,81 @@
     opacity: 1;
     transform: rotateX(0deg) scale(1, 1);
   }
+}
+
+.show-1 {
+  animation: cssAnimation-show 0s 3s forwards;
+  width:0;
+  height:0;
+  visibility:hidden;
+}
+
+.show-2 {
+  animation: cssAnimation-show 0s 6s forwards;
+  width:0;
+  height:0;
+  visibility:hidden;
+}
+
+@keyframes cssAnimation-show {
+  to   { 
+    visibility: visible; 
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.hide-1 {
+  -moz-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 3s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 3s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+.hide-2 {
+  -moz-animation: cssAnimation 0s ease-in 9s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 9s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 9s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 9s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      overflow:hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      visibility:hidden;
+  }
+}
+
+.emph-text {
+  font-style: italic;
+}
+
+.link-text{
+  color: var(--color-accent);
+  text-decoration: underline;
+
+}
+
+a:hover{
+  color: var(--color-accent-alt);
 }
