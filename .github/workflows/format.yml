@@ -11,7 +11,7 @@ on:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-
+    if: github.repository == 'ObieSource/obiesource.github.io'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
