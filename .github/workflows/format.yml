@@ -13,17 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'ObieSource/obiesource.github.io'
     steps:
-      # # We want this GitHub Action re-format code on the main branch.
-      # # But we also have a branch protection rule so that people don't
-      # # accidentally push to the main branch.
-      # # The GitHub Action needs to use a GitHub app (which we call
-      # # obiesource-admin-push) in order to bypass that rule.
-      # - name: Generate a GitHub App token
-      #   id: generate_token
-      #   uses: actions/create-github-app-token@v1
-      #   with:
-      #     app_id: ${{ secrets.APP_ID }}
-      #     private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      # We want this GitHub Action re-format code on the main branch.
+      # But we also have a branch protection rule so that people don't
+      # accidentally push to the main branch.
+      # So we use a GitHub Personal Access Token of an admin (Ajai right now) to push.
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,7 +25,7 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.PAT }}
 
-      - name: Set git origin url so prettier_action knows how to push using the GitHub App
+      - name: Set git origin url so prettier_action knows how to push using the GitHub Personal Access Token
         run: git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
