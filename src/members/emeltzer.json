@@ -1,0 +1,17 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Em",
+  "pronouns": "any",
+  "class": "'25",
+  "socials": [
+    "https://github.com/captainbanaynays"
+  ],
+  "bio": "\"If you add yourself to the members page of the website, you won't be the leat committed member of the club\" -Someone who clearly has no idea.",
+  "projects": [
+    {
+      "name": "Look at my github",
+      "description": "Here is where all my projects are!",
+      "website": "https://github.com/captainbanaynays"
+    }
+  ]
+}
