@@ -54,9 +54,21 @@
 .obs__members-columns {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   font-size: 20px;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .obs__members-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .obs__members-description {
+    margin: 0;
+  }
 }
 
 .obs__members-columns ul {

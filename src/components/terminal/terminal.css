@@ -24,7 +24,6 @@
 .obs__terminal-terminal-body {
   padding: 2rem 1.8rem;
   text-align: center;
-
 }
 .obs__terminal-terminal-buttons {
   display: inline-block;
@@ -34,18 +33,18 @@
   margin-right: 0.7rem;
 
   &.red {
-    background: #FF6057;
-    border: 1px solid #E14640;
+    background: #ff6057;
+    border: 1px solid #e14640;
   }
 
   &.amber {
-    background: #FFBD2E;
-    border: 1px solid #DFA123;
+    background: #ffbd2e;
+    border: 1px solid #dfa123;
   }
 
   &.green {
-    background: #27C93F;
-    border: 1px solid #1DAD2B;
+    background: #27c93f;
+    border: 1px solid #1dad2b;
   }
 }
 
@@ -56,6 +55,11 @@
   color: var(--color-txt);
 }
 
+@media screen and (max-width: 700px) {
+  .obs__terminal-heading {
+    font-size: 40px;
+  }
+}
 
 .obs__terminal-description__container {
   display: flex;
@@ -91,7 +95,6 @@
   font-size: 16px;
   color: var(--color-txt);
 }
-
 
 @media screen and (max-width: 700px) {
   .obs__terminal {
