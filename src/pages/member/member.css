@@ -1,3 +1,6 @@
 .invalid-member {
   color: red;
 }
+a {
+  text-decoration: none;
+}
