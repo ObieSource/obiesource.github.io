@@ -3,7 +3,7 @@
 Please feel free to ask us for help in the Discord or in person!
 And if you think this guide can be improved, please tell us -- or make the changes yourself in a pull request by clicking the pencil icon a little above this paragraph and to the right.
 
-## Step 1: Set up Git:
+## Step 1: Set up Git
 
 ### Installing Git
 
