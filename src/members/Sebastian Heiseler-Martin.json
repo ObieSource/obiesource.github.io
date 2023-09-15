@@ -1,5 +1,5 @@
 {
-  "$Sebastian": "../member.Sebastian.json",
+  "$schema": "../member.Sebastian.json",
   "name": "Sebastian Heisler-Martin",
   "pronouns": "he/him",
   "class": "2027",
