@@ -123,10 +123,10 @@ At the top of this page is a "fork" button. Click this button to make a personal
    >
    > - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
    > - `ls` (_**l**i**s**t_) lists the files in the current directory.
+   >   - Once you find the list of files, you can use `cd` to move into a directory, or a text editor to move into a text file within the director
+   >   - If you want to use built-in editors like vim or emacs - `vim file1` or `emacs file2` - that is an option, but other editors like VSCode would also work (however this requires more work to install, ask for help!)
    > - `cd` (_**c**hange **d**irectory_) moves between directories.
-   >   - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource/`.
-   >     If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
-   >   - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
+   >   - You can list files within the new directory with `ls` and and move through folders with `cd.` This is what you'll be spending 90% of your time in the terminal doing!
 
 4. Paste the GitHub CLI command you copied.
 5. Make a new branch in git:
