@@ -13,14 +13,33 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'ObieSource/obiesource.github.io'
     steps:
+      # We want this GitHub Action re-format code on the main branch.
+      # But we also have a branch protection rule so that people don't
+      # accidentally push to the main branch.
+      # The GitHub Action needs to use a GitHub app (which we call
+      # obiesource-admin-push) in order to bypass that rule.
+      - name: Generate a GitHub App token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Use the token
+        run: |
+          gh api octocat
+
       - name: Checkout
         uses: actions/checkout@v3
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         with:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         with:
           # This part is also where you can pass other options, for example:
           prettier_options: "--write ."
