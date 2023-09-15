@@ -116,9 +116,8 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
 1. Navigate to your forked repository
    - If github doesn't automatically take you there, you can click your avatar in the top right corner > Your repositories > obiesource.github.io
-2. Click Code. Click on either HTTPS or SSH, depending on which you chose in [Authenticating with GitHub from Git](https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#authenticating-with-github-from-git) in step 1. Copy the link.
-3. Open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows)
-4. Navigate to where you want to store the repository locally.
+2. Click Code. Click GitHub CLI. Copy the command and paste it into the terminal.
+3. In the terminal, navigate to where you want to store the repository locally.
 
    > If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
    >
@@ -129,13 +128,10 @@ At the top of this page is a "fork" button. Click this button to make a personal
    >     If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
    >   - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
 
-5. Enter the following command in your terminal. (Don't actually include the curly braces `{}`.)
-   ```sh
-   git clone {the-link-you-copied}
-   ```
-6. Make a new branch in git:
+4. Paste the GitHub CLI command you copied.
+5. Make a new branch in git:
 
-   - enter the following commands:
+   - enter the following command:
 
      ```sh
      git switch -c new-member
@@ -143,7 +139,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
      > This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
 
-     This command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
+     That command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
 
      > **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
@@ -167,16 +163,16 @@ At the top of this page is a "fork" button. Click this button to make a personal
    ```sh
    npm start
    ```
-4. In your favorite web browser, navigate to the local URL listed in the output of `npm start` (probably something like <http://localhost:3000> or <http://127.0.0.1:8000/>).
+4. Your browser will probably open the page automatically. If it doesn't, navigate to the local URL listed in the output of npm start (probably something like http://localhost:3000 or http://127.0.0.1:8000/).
 
    > **Troubleshooting:**
    >
-   > - If there's an error in the terminal,
    > - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
    > - If you forget the "name" field, you'll see an error in the members list page itself.
 
-5. You should see a link that includes your name. Click on it.
-6. You should see a page with all your information on it!
+5. Click on "Members" at the top.
+6. You should see a link that includes your name. Click on it.
+7. You should see a page with all your information on it!
    > **Troubleshooting:** If you see an error message, try to fix the error in `src/members/{your-name}.json`.
 
 ## Step 6: Push the repository:
@@ -199,7 +195,8 @@ At the top of this page is a "fork" button. Click this button to make a personal
    # since you don't yet have a branch called new-member in your fork.
    # Let's follow git's suggestion from the error message to confirm that
    # you want to associate this local new-member branch with your fork's new-member branch.
-   # (By default, "origin" is the GitHub repository you cloned from. In this case, that's your fork.)
+   # (By default, "origin" is the GitHub repository you cloned from. In this case,
+   # that's your fork.)
    git push --set-upstream origin new-member
    ```
 
