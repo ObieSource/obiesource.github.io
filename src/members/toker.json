@@ -4,13 +4,13 @@
   "status": "officer",
   "pronouns": "he/him/his",
   "class": "Class of 2026",
-  "socials": ["https://instagram.com/tenboker"],
-  "bio": "Possibly cool.",
+  "socials": ["btoker.dev"],
+  "bio": "Hey! I'm Ben, president of ObieSource! I love Rust, C, Java, and (sometimes) Python. I love to read, play jazz guitar, and make coffee! Let's make some cool stuff ^_^",
   "projects": [
     {
-      "name": "webScrape",
-      "description": "I made this.",
-      "website": "https://btoker.dev"
+      "name": "flowst",
+      "description": "A pomodoro study tool built in rust!",
+      "website": "https://github.com/ben-toker/flowst"
     }
   ]
 }
