@@ -5,9 +5,98 @@ And if you think this guide can be improved, please tell us -- or make the chang
 
 ## Step 1: Set up Git:
 
-Follow this guide for "Setting up Git" and "Authenticating with GitHub from Git":
-<https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#setting-up-git>.
-This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
+### Installing Git
+
+Click on your operating system to see installation instructions:
+
+<details>
+<summary>Windows</summary>
+
+1. Go to <https://git-scm.com/download/win> to install Git.
+   (You probably want the 64-bit installer.)
+2. To check that it installed correctly, open **Git Bash** and type the following command (and then press enter):
+
+   ```bash
+   git version
+   ```
+
+   It should say `git version 2.42.0` (or some higher version).
+
+   > **Tip:** If you want to paste a command into Git Bash, the regular Control-V shortcut won't work by default. Instead, you can right click and click on Edit -> Paste. For more ways to do it (including how to enable Control-V), see [here](https://unfuddle.com/stack/tips-tricks/git-how-to-paste-in-git-bash/).
+
+3. [Install App Installer from from the Microsoft Store.](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) (This comes with a tool called `winget` for installing stuff.)
+4. Run the following command in Git Bash to install the GitHub Command Line Interface (CLI):
+   ```bash
+   winget install --id GitHub.cli
+   ```
+
+</details>
+
+<details>
+<summary>MacOS</summary>
+
+1. Open **Terminal.app**.
+2. Type the following command into the terminal (and then press return). (This command installs [Homebrew](https://brew.sh/), which is a tool for installing stuff.)
+   ```zsh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+3. Run the following command to install git, the GitHub Command Line Interface, and git-credential-manager using Homebrew:
+   ```zsh
+   brew install git gh git-credential-manager
+   ```
+4. To check that it installed correctly, run the following command:
+
+   ```bash
+   git version
+   ```
+
+   It should say `git version 2.42.0` (or some higher version).
+
+</details>
+
+### Make a GitHub account
+
+If you don't have a GitHub account, [make one](https://github.com/signup)! I suggest using your personal email, since you'll likely be using this account after leaving Oberlin.
+
+### Connect git to your GitHub account
+
+Run the following command and follow the instructions:
+
+```bash
+gh auth login
+```
+
+### Hide your email on GitHub
+
+Every time you make a change with git, behind the scenes, it writes down your name, the date/time, and your email. When you share your commits with a public repository, that information is shared also. But you probably don't want to be sharing your email with the world! So GitHub can provide you with a fake email address to use when you sign your changes.
+
+This email does not become your GitHub account email. It is used for this one purpose only, and you should never have to type it in after these steps.
+
+This part is optional but recommended.
+
+1. Go to <https://github.com/settings/emails#toggle_visibility>.
+2. Check the checkboxes **"Keep my email addresses private"** and **"Block command line pushes that expose my email"**.
+3. Under the first checkbox, you should see an email address that looks something like this: `39969985+wknowleskellett@users.noreply.github.com`. Copy it for the next step.
+
+### Configuring Git
+
+Run the following command to set your Git email (replacing the part in quotes with the email you just copied).
+
+```bash
+git config --global user.email "39969985+wknowleskellett@users.noreply.github.com"
+```
+
+Git also needs a name to put in your commits. (Note that like the email, this will be shared publicly.)
+
+```bash
+git config --global user.name "John Doe"
+```
+
+Optional: Git’s default editor is `vim`. If you don’t feel like learning a complicated (but powerful!) editor, `nano` is another terminal-based editor that’s easier to get started with.
+
+```bash
+git config --global core.editor nano
+```
 
 ## Step 2: Set up Node.js
 
