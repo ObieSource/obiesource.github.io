@@ -4,7 +4,7 @@
   "status": "officer",
   "pronouns": "he/him/his",
   "class": "Class of 2026",
-  "socials": ["btoker.dev"],
+  "socials": ["https://btoker.dev"],
   "bio": "Hey! I'm Ben, president of ObieSource! I love Rust, C, Java, and (sometimes) Python. I love to read, play jazz guitar, and make coffee! Let's make some cool stuff ^_^",
   "projects": [
     {
