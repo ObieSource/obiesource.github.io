@@ -107,12 +107,12 @@ Install Node.js from here: <https://nodejs.org/en/download>.
 
 To check whether you have Node set up right, open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows). Type the command `node -v`. If it prints a version number (e.g. `v18.17.1`), it's working. If it prints something like `command not found`, it's not working.
 
-## Step 3: Fork the repository:
+## Step 3: Fork the repository
 
 A fork is your personal copy of someone else's repository on GitHub. You can make whatever changes you want without messing up anyone else's work.
 At the top of this page is a "fork" button. Click this button to make a personal copy of the obiesource website repository.
 
-## Step 4: Clone the repository locally:
+## Step 4: Clone the repository locally
 
 1. Navigate to your forked repository
    - If github doesn't automatically take you there, you can click your avatar in the top right corner > Your repositories > obiesource.github.io
@@ -143,14 +143,14 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
      > **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
-## Step 4: Make changes:
+## Step 4: Make changes
 
 1. Navigate to the folder `obiesource.github.io/src/members`
 2. Make a copy of `_template.json`
 3. Rename the copy `{your-name}.json`
 4. Edit the document with your own personal information using a text editor. (I recommend [Visual Studio Code](https://code.visualstudio.com/).) All fields other than "name" are optional (just delete them to remove them from the page).
 
-## Step 5: Test your changes:
+## Step 5: Test your changes
 
 **NOTE**: This is the step that relies on you having Node.js installed from step 2.
 
@@ -175,7 +175,7 @@ At the top of this page is a "fork" button. Click this button to make a personal
 7. You should see a page with all your information on it!
    > **Troubleshooting:** If you see an error message, try to fix the error in `src/members/{your-name}.json`.
 
-## Step 6: Push the repository:
+## Step 6: Push the repository
 
 1. In your terminal, navigate to `obiesource.github.io/`
 2. Run the following commands:
