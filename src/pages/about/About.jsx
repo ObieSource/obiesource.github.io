@@ -1,11 +1,11 @@
 import React from "react";
-import {Terminal, AboutMore} from "../../components"
+import { Terminal, AboutMore } from "../../components";
 
 const About = () => {
   return (
     <div id="about">
-      <Terminal heading="About"/>
-      <AboutMore/>
+      <Terminal heading="About" />
+      <AboutMore />
     </div>
   );
 };

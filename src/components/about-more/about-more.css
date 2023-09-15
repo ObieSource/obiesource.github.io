@@ -16,7 +16,7 @@
   color: var(--color-txt);
   font-family: var(--font-text-1);
   font-size: 16px;
-  font-weight:400;
+  font-weight: 400;
   margin: 1.5em 0rem 0rem 0rem;
   padding-bottom: 3rem;
 }
@@ -34,7 +34,6 @@
   font-size: 16px;
   color: var(--color-txt);
 }
-
 
 @media screen and (max-width: 700px) {
   .obs__about-more {

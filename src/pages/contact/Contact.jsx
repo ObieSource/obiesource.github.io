@@ -1,6 +1,6 @@
 import React from "react";
 import "./contact.css";
-import {Terminal, ContactMore} from "../../components"
+import { Terminal, ContactMore } from "../../components";
 
 const Contact = () => {
   return (
