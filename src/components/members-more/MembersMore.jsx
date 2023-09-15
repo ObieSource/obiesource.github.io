@@ -1,5 +1,5 @@
 import React from "react";
-import "./members.css";
+import "./members-more.css";
 import members from "../../members";
 import { Link } from "react-router-dom";
 
@@ -34,67 +34,64 @@ const MemberCard = ({ member: { name, filename, bio } }) => {
   }
   return (
     <div
-    className="obs__members-member animate flip"
+    className="obs__members-more-member animate flip"
     key={name}
     >
-      <div className="obs__members-member-heading">
-        <div className="obs__members-member-heading-title">
+      <div className="obs__members-more-member-heading">
+        <div className="obs__members-more-member-heading-title">
           {name}
         </div>
       </div>
-      <div className="obs__members-member-heading-description">
+      <div className="obs__members-more-member-heading-description">
         {bio == "" ? "" : bio}
       </div>
   </div>
   );
 };
 
-const Members = () => {
+const officers = members.filter((member) => member.status === "officer")
+const regMembers = members.filter(
+  (member) => member.status === "member" || member.status == null,)
+const alumni = members.filter((member) => member.status === "alum")
+
+const MembersMore = () => {
   return (
-    <main className="obs__members">
-      <div className="obs__members-heading">
+    <main className="obs__members-more">
+      <div className="obs__members-more-heading">
           &#123;Meet the team&#125;
         </div>
 
-        <div className="obs__members-subsection">
-          <div className="obs__members-subheading">
+        <div className="obs__members-more-subsection">
+          <div className="obs__members-more-subheading">
             Club Officers
           </div>
 
-          <div className="obs__members-members__container">
-          {members
-            .filter((member) => member.status === "officer")
-            .map((member) => (
+          <div className="obs__members-more-members-more__container">
+          {officers.map((member) => (
               <MemberCard member={member} key={member.filename} />
             ))}
           </div>
         </div>
 
-        <div className="obs__members-subsection">
-          <div className="obs__members-subheading">
+        <div className="obs__members-more-subsection">
+          <div className="obs__members-more-subheading">
             Members
           </div>
 
-          <div className="obs__members-members__container">
-          {members
-            .filter(
-              (member) => member.status === "member" || member.status == null,
-            )
-            .map((member) => (
+          <div className="obs__members-more-members-more__container">
+          {regMembers.map((member) => (
               <MemberCard member={member} key={member.filename} />
             ))}
           </div>
         </div>
 
-        <div className="obs__members-subsection">
-          <div className="obs__members-subheading">
+        <div className="obs__members-more-subsection">
+          <div className="obs__members-more-subheading">
             Alumni
           </div>
 
-          <div className="obs__members-members__container">
-          {members
-            .filter((member) => member.status === "alum")
-            .map((member) => (
+          <div className="obs__members-more-members-more__container">
+          {alumni.map((member) => (
               <MemberCard member={member} key={member.filename} />
               ))}
           </div>
@@ -103,4 +100,4 @@ const Members = () => {
   );
 };
 
-export default Members;
+export default MembersMore;

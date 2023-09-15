@@ -1,14 +1,14 @@
-.obs__members {
+.obs__members-more {
   width: 100%;
-  padding: 3rem 6rem;
-  background-color: var(--color-background);
+  padding: 3rem 6rem 0rem 6rem;
+  background-color: var(--color-foreground);
  }
  
- .obs__members-subsection {
+ .obs__members-more-subsection {
   margin-bottom: 2rem;
  }
 
- .obs__members-heading {
+ .obs__members-more-heading {
    color: var(--color-txt);
    font-family: var(--font-text-1);
    font-size: 30px;
@@ -17,7 +17,7 @@
    margin-bottom:2rem
  }
 
- .obs__members-subheading {
+ .obs__members-more-subheading {
    color: var(--color-txt);
    font-family: var(--font-text-1);
    font-size: 20px;
@@ -27,7 +27,7 @@
 
  }
  
- .obs__members-members__container {
+ .obs__members-more-members-more__container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -36,14 +36,14 @@
   min-width: 0px;
 }
 
- .obs__members-member {
+ .obs__members-more-member {
    display: inline-block;
    padding: 2rem 1.8rem;
    width: 36rem;
    background-color: var(--color-foreground-2);
    border-radius: 7px;
  }
-.obs__members-member-heading {
+.obs__members-more-member-heading {
  display: flex;
  justify-content: space-between;
  font-family: var(--font-text-1);
@@ -52,16 +52,16 @@
  padding-bottom: 1rem;
 }
 
- .obs__members-member-heading-title {
+ .obs__members-more-member-heading-title {
   color: #2f81f7;
   font-weight: 700;
  }
 
- .obs__members-member-heading-title a {
+ .obs__members-more-member-heading-title a {
   text-decoration: none;
  }
  
- .obs__members-description {
+ .obs__members-more-description {
    color: var(--color-txt);
    font-family: var(--font-text-1);
    font-size: 16px;
@@ -70,7 +70,7 @@
    padding-bottom: 3rem;
  }
  
- .obs__members-description h3 {
+ .obs__members-more-description h3 {
    font-family: var(--font-text-1);
    font-weight: 500;
    font-size: 30px;
@@ -78,7 +78,7 @@
    color: var(--color-accent);
  }
  
- .obs__members-description p {
+ .obs__members-more-description p {
    font-family: var(--font-text-1);
    font-size: 16px;
    color: var(--color-txt);
@@ -86,13 +86,13 @@
  
  
  @media screen and (max-width: 700px) {
-   .obs__members {
+   .obs__members-more {
      padding: 2rem 4rem;
    }
  }
  
  @media screen and (max-width: 550px) {
-   .obs__members {
+   .obs__members-more {
      padding: 2rem;
    }
  }

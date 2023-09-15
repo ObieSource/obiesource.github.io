@@ -10,18 +10,7 @@
   color: var(--color-txt);
 }
 
-:root {
-  /*   
-  --font-family-text: "Open Sans", sans-serif;
-  --font-family-display: "Fira Mono", monospace;
-  --font-family-heading: "Fredoka One", cursive;
-  --color-bg: #0d1117;
-  --color-bg-alt: #55843d;
-  --color-bg-alt-1: #5d4887;
-  --color-text: #ffffff;
-  --color-text-alt: #ff6631;
-  --color-text-alt-light: #f8c8ac; */
-  
+:root {  
   /* new fonts */
     --font-family-logo: "Fira Mono", monospace;
     --font-display: 'Fira Sans Condensed', sans-serif;
@@ -179,7 +168,6 @@
 }
 
 .emph-text {
-  color: var(--color-accent);
   font-style: italic;
 }
 
