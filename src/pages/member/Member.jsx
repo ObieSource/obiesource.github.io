@@ -20,8 +20,14 @@ const Socials = ({ socials }) => {
     <ul>
       {socials.map((url) => (
         <li key={url}>
-          <a style={{
-        fontFamily: "var(--font-text-1)"}} href={url}>{url}</a>
+          <a
+            style={{
+              fontFamily: "var(--font-text-1)",
+            }}
+            href={url}
+          >
+            {url}
+          </a>
         </li>
       ))}
     </ul>
@@ -43,12 +49,22 @@ const Projects = ({ projects }) => {
     );
   }
   return (
-    <ul style={{
-        fontFamily: "var(--font-text-1)"}}>
+    <ul
+      style={{
+        fontFamily: "var(--font-text-1)",
+      }}
+    >
       {projects.map((project) => (
         <li key={project.name || project.website || project.description}>
-          <a style={{
-        fontFamily: "var(--font-text-1)"}} href={project.website}>{project.name}</a> - {project.description}
+          <a
+            style={{
+              fontFamily: "var(--font-text-1)",
+            }}
+            href={project.website}
+          >
+            {project.name}
+          </a>{" "}
+          - {project.description}
         </li>
       ))}
     </ul>
@@ -67,18 +83,24 @@ const Member = () => {
   }
   return (
     <main className="content color__text">
-      <h1 style={{
-        fontFamily: "var(--font-text-1)"}}>
+      <h1
+        style={{
+          fontFamily: "var(--font-text-1)",
+        }}
+      >
         {member.name} {member.class}
         {member.pronouns && `, ${member.pronouns}`}
       </h1>
       <Socials socials={member.socials} />
-      <p style={{
-        fontFamily: "var(--font-text-1)",
-        fontWeight: 400,
-        fontSize: "16px"
-
-      }}>{member.bio}</p>
+      <p
+        style={{
+          fontFamily: "var(--font-text-1)",
+          fontWeight: 400,
+          fontSize: "16px",
+        }}
+      >
+        {member.bio}
+      </p>
       <Projects projects={member.projects} />
     </main>
   );
