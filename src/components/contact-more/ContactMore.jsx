@@ -6,7 +6,7 @@ const ContactMore = () => {
     <div className="obs__contact-more">
       <div className="obs__contact-more-heading">
         &#123;Reach out to us!&#125;
-      </div >
+      </div>
 
       <div className="obs__contact-more-description">
         To reach out about one of our projects, or if you want to collaborate
