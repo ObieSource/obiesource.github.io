@@ -60,7 +60,7 @@ If you don't have a GitHub account, [make one](https://github.com/signup)! I sug
 
 ### Connect git to your GitHub account
 
-Run the following command and follow the instructions:
+Run the following command and follow the instructions it gives you:
 
 ```bash
 gh auth login
