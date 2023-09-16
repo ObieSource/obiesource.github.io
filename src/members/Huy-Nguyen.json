@@ -3,9 +3,7 @@
   "name": "Huy Nguyen",
   "pronouns": "he/him",
   "class": "'27",
-  "socials": [
-    "https://www.facebook.com/profile.php?id=100026490908290"
-  ],
+  "socials": ["https://www.facebook.com/profile.php?id=100026490908290"],
   "bio": "Hi! I'm a first-year, probably going to major in Computer Science. I do most (if not all) of my coding on C#.",
   "projects": [
     {
