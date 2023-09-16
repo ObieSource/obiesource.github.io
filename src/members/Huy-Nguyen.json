@@ -1,0 +1,20 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Huy Nguyen",
+  "pronouns": "he/him",
+  "class": "'27",
+  "socials": ["https://www.facebook.com/profile.php?id=100026490908290"],
+  "bio": "Hi! I'm a first-year, probably going to major in Computer Science. I do most (if not all) of my coding on C#.",
+  "projects": [
+    {
+      "name": "minesweeper",
+      "description": "My 3rd attempt. Coming sooooooon...",
+      "website": ""
+    },
+    {
+      "name": "philostory",
+      "description": "my failed attempt to advance to the 3rd round of a so-called Hackathon. I lost the source code though, sadly. Also everything is written in Vietnamese (and C#).",
+      "website": "https://github.com/nguyenhuy0905/PhiloStory"
+    }
+  ]
+}

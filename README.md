@@ -3,11 +3,100 @@
 Please feel free to ask us for help in the Discord or in person!
 And if you think this guide can be improved, please tell us -- or make the changes yourself in a pull request by clicking the pencil icon a little above this paragraph and to the right.
 
-## Step 1: Set up Git:
+## Step 1: Set up Git
 
-Follow this guide for "Setting up Git" and "Authenticating with GitHub from Git":
-<https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#setting-up-git>.
-This is the hardest part, and we recommend doing so in club so that we can answer questions while you do this.
+### Installing Git
+
+Click on your operating system to see installation instructions:
+
+<details>
+<summary>Windows</summary>
+
+1. Go to <https://git-scm.com/download/win> to install Git.
+   (You probably want the 64-bit installer.)
+2. To check that it installed correctly, open **Git Bash** and type the following command (and then press enter):
+
+   ```bash
+   git version
+   ```
+
+   It should say `git version 2.42.0` (or some higher version).
+
+   > **Tip:** If you want to paste a command into Git Bash, the regular Control-V shortcut won't work by default. Instead, you can right click and click on Edit -> Paste. For more ways to do it (including how to enable Control-V), see [here](https://unfuddle.com/stack/tips-tricks/git-how-to-paste-in-git-bash/).
+
+3. [Install App Installer from from the Microsoft Store.](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) (This comes with a tool called `winget` for installing stuff.)
+4. Run the following command in Git Bash to install the GitHub Command Line Interface (CLI):
+   ```bash
+   winget install --id GitHub.cli
+   ```
+
+</details>
+
+<details>
+<summary>MacOS</summary>
+
+1. Open **Terminal.app**.
+2. Type the following command into the terminal (and then press return). (This command installs [Homebrew](https://brew.sh/), which is a tool for installing stuff.)
+   ```zsh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+3. Run the following command to install git, the GitHub Command Line Interface, and git-credential-manager using Homebrew:
+   ```zsh
+   brew install git gh git-credential-manager
+   ```
+4. To check that it installed correctly, run the following command:
+
+   ```bash
+   git version
+   ```
+
+   It should say `git version 2.42.0` (or some higher version).
+
+</details>
+
+### Make a GitHub account
+
+If you don't have a GitHub account, [make one](https://github.com/signup)! I suggest using your personal email, since you'll likely be using this account after leaving Oberlin.
+
+### Connect git to your GitHub account
+
+Run the following command and follow the instructions it gives you:
+
+```bash
+gh auth login
+```
+
+### Hide your email on GitHub
+
+Every time you make a change with git, behind the scenes, it writes down your name, the date/time, and your email. When you share your commits with a public repository, that information is shared also. But you probably don't want to be sharing your email with the world! So GitHub can provide you with a fake email address to use when you sign your changes.
+
+This email does not become your GitHub account email. It is used for this one purpose only, and you should never have to type it in after these steps.
+
+This part is optional but recommended.
+
+1. Go to <https://github.com/settings/emails#toggle_visibility>.
+2. Check the checkboxes **"Keep my email addresses private"** and **"Block command line pushes that expose my email"**.
+3. Under the first checkbox, you should see an email address that looks something like this: `39969985+wknowleskellett@users.noreply.github.com`. Copy it for the next step.
+
+### Configuring Git
+
+Run the following command to set your Git email (replacing the part in quotes with the email you just copied).
+
+```bash
+git config --global user.email "39969985+wknowleskellett@users.noreply.github.com"
+```
+
+Git also needs a name to put in your commits. (Note that like the email, this will be shared publicly.)
+
+```bash
+git config --global user.name "John Doe"
+```
+
+Optional: Git’s default editor is `vim`. If you don’t feel like learning a complicated (but powerful!) editor, `nano` is another terminal-based editor that’s easier to get started with.
+
+```bash
+git config --global core.editor nano
+```
 
 ## Step 2: Set up Node.js
 
@@ -18,35 +107,31 @@ Install Node.js from here: <https://nodejs.org/en/download>.
 
 To check whether you have Node set up right, open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows). Type the command `node -v`. If it prints a version number (e.g. `v18.17.1`), it's working. If it prints something like `command not found`, it's not working.
 
-## Step 3: Fork the repository:
+## Step 3: Fork the repository
 
 A fork is your personal copy of someone else's repository on GitHub. You can make whatever changes you want without messing up anyone else's work.
 At the top of this page is a "fork" button. Click this button to make a personal copy of the obiesource website repository.
 
-## Step 4: Clone the repository locally:
+## Step 4: Clone the repository locally
 
 1. Navigate to your forked repository
    - If github doesn't automatically take you there, you can click your avatar in the top right corner > Your repositories > obiesource.github.io
-2. Click Code. Click on either HTTPS or SSH, depending on which you chose in [Authenticating with GitHub from Git](https://docs.github.com/en/github-ae@latest/get-started/quickstart/set-up-git#authenticating-with-github-from-git) in step 1. Copy the link.
-3. Open a terminal on your computer (e.g. Terminal for Mac; PowerShell or Git Bash for Windows)
-4. Navigate to where you want to store the repository locally.
+2. Click Code. Click GitHub CLI. Copy the command and paste it into the terminal.
+3. In the terminal, navigate to where you want to store the repository locally.
 
    > If you're not as familiar with the terminal, here are some basic commands you can use to navigate around. (The command line is pretty useful sometimes, but at first it'll probably just feel annoying.)
    >
    > - `pwd` (_**p**rint **w**orking **d**irectory_) prints the full path of the directory (AKA folder) you're currently in.
    > - `ls` (_**l**i**s**t_) lists the files in the current directory.
+   >   - Once you find the list of files, you can use `cd` to move into a directory, or a text editor to move into a text file within the director
+   >   - If you want to use built-in editors like vim or emacs - `vim file1` or `emacs file2` - that is an option, but other editors like VSCode would also work (however this requires more work to install, ask for help!)
    > - `cd` (_**c**hange **d**irectory_) moves between directories.
-   >   - If you're currently in `/Users/william/Documents/`, you can run `cd code/obiesource` to go to `/Users/william/Documents/code/obiesource/`.
-   >     If you start the path with a `/`, it'll be interpreted as an **absolute path** instead of `cd /Users/william/Documents/code/obiesource/`.
-   >   - If you're currently in `/Users/william/Documents/code/obiesource/`, run `cd ..` to go to the parent directory, `/Users/william/Documents/code/`.
+   >   - You can list files within the new directory with `ls` and and move through folders with `cd.` This is what you'll be spending 90% of your time in the terminal doing!
 
-5. Enter the following command in your terminal. (Don't actually include the curly braces `{}`.)
-   ```sh
-   git clone {the-link-you-copied}
-   ```
-6. Make a new branch in git:
+4. Paste the GitHub CLI command you copied.
+5. Make a new branch in git:
 
-   - enter the following commands:
+   - enter the following command:
 
      ```sh
      git switch -c new-member
@@ -54,18 +139,18 @@ At the top of this page is a "fork" button. Click this button to make a personal
 
      > This is a shorthand for `git switch --create new-member`, which itself is a shorthand for running `git branch new-member` and then `git switch new-member`.
 
-     This command creates a new branch called `new-member` and switches to it. To learn more about git, come to one of our git/GitHub workshops!
+     That command creates a new branch called `new-member` and switches to it.
 
      > **Troubleshooting**: If you have an old version of `git` (like Clyde does), you might get an error message that `'switch' is not a git command`. In that case, run `git checkout -b new-member`.
 
-## Step 4: Make changes:
+## Step 4: Make changes
 
 1. Navigate to the folder `obiesource.github.io/src/members`
 2. Make a copy of `_template.json`
 3. Rename the copy `{your-name}.json`
 4. Edit the document with your own personal information using a text editor. (I recommend [Visual Studio Code](https://code.visualstudio.com/).) All fields other than "name" are optional (just delete them to remove them from the page).
 
-## Step 5: Test your changes:
+## Step 5: Test your changes
 
 **NOTE**: This is the step that relies on you having Node.js installed from step 2.
 
@@ -78,19 +163,19 @@ At the top of this page is a "fork" button. Click this button to make a personal
    ```sh
    npm start
    ```
-4. In your favorite web browser, navigate to the local URL listed in the output of `npm start` (probably something like <http://localhost:3000> or <http://127.0.0.1:8000/>).
+4. Your browser will probably open the page automatically. If it doesn't, navigate to the local URL listed in the output of npm start (probably something like http://localhost:3000 or http://127.0.0.1:8000/).
 
    > **Troubleshooting:**
    >
-   > - If there's an error in the terminal,
    > - If the page is blank, you'll probably be able to see the error if you open up your browser's developer console. (Or there might be an error message in the terminal where you're running the server.) It's probably because your JSON syntax isn't quite right. Look out for mistakes in quotation marks and commas in `src/members/{your-name}.json`!
    > - If you forget the "name" field, you'll see an error in the members list page itself.
 
-5. You should see a link that includes your name. Click on it.
-6. You should see a page with all your information on it!
+5. Click on "Members" at the top.
+6. You should see a link that includes your name. Click on it.
+7. You should see a page with all your information on it!
    > **Troubleshooting:** If you see an error message, try to fix the error in `src/members/{your-name}.json`.
 
-## Step 6: Push the repository:
+## Step 6: Push the repository
 
 1. In your terminal, navigate to `obiesource.github.io/`
 2. Run the following commands:
@@ -110,7 +195,8 @@ At the top of this page is a "fork" button. Click this button to make a personal
    # since you don't yet have a branch called new-member in your fork.
    # Let's follow git's suggestion from the error message to confirm that
    # you want to associate this local new-member branch with your fork's new-member branch.
-   # (By default, "origin" is the GitHub repository you cloned from. In this case, that's your fork.)
+   # (By default, "origin" is the GitHub repository you cloned from. In this case,
+   # that's your fork.)
    git push --set-upstream origin new-member
    ```
 
@@ -124,78 +210,3 @@ A pull request is a request to have the changes from your forked repository adde
    <!-- ^ I don't think this should be necessary. And if there is a merge conflict for some reason, we can help people deal with it once they submit the PR. -->
 3. Click Contribute > Open pull request > Create pull request
 4. Now just wait! We'll review the additions and either give you feedback or accept the request!
-
----
-
-## Getting Started with Create React App
-
-> **NOTE**: [Create React App](https://create-react-app.dev/) is the tool we used to create the current version of the website. The rest of this page is the documentation that was added automatically by Create React App.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Available Scripts
-
-In the project directory, you can run:
-
-#### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-#### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-#### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-#### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-#### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-#### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-#### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-#### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-#### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-#### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

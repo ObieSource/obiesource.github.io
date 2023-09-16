@@ -1,0 +1,9 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Rosie McKusick",
+  "pronouns": "she/they",
+  "class": "'25",
+  "socials": [],
+  "bio": "I like reading. :) I am a third year Computer Science major and hopefully Art History minor.",
+  "projects": []
+}
