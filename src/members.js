@@ -1,13 +1,11 @@
 const members = [];
 
-// Use the Webpack context module API (https://webpack.js.org/guides/dependency-management/#context-module-api)
+// Use the Vite `import.meta.glob` feature (https://vitejs.dev/guide/features.html#glob-import)
 // to import all json files in the members directory (except for _template.json)
 // and put their contents into the members array.
-function importAll(memberRequirer) {
-  const filenames = memberRequirer.keys();
-  console.log(filenames);
-  filenames.forEach((filename) => {
-    const data = memberRequirer(filename);
+function importAll(importRes) {
+  for (const [filename, module] of Object.entries(importRes)) {
+    const data = module.default;
     if (typeof data !== "object") {
       throw new Error(
         `The file ${filename} must export a JSON object. Instead we got a JSON ${typeof data}.`,
@@ -24,9 +22,12 @@ function importAll(memberRequirer) {
       // also add an extra field for the filename (for debugging)
       filename: filename.substring(2),
     });
-  });
+  }
 }
 // import all json files in the members directory (except for _template.json)
-importAll(require.context("./members", true, /\/[^_][^/]+\.json$/));
+// importAll(require.context("./members", true, /\/[^_][^/]+\.json$/));
+importAll(
+  import.meta.glob(["./members/*.json", "!./members/_*"], { eager: true }),
+);
 
 export default members;
