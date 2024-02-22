@@ -1,7 +1,29 @@
 .hackathon {
+  font-size: 18px;
   font-family: var(--font-text-1);
 }
 
-.text-center {
+.hackathon .disclaimer {
+  margin-bottom: 2rem;
+  font-size: 1.2em;
+}
+.hackathon .disclaimer * {
+  color: red;
+}
+
+.hackathon .text-center {
   text-align: center;
+}
+
+.hackathon .title p {
+  margin-top: 0;
+}
+
+.hackathon ul ul {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hackathon li:not(:last-child) {
+  margin-bottom: 0.2rem;
 }
