@@ -10,7 +10,15 @@ import {
 import "./App.css";
 
 import { Navbar } from "./components";
-import { Home, About, Contact, Resources, Members, Member } from "./pages";
+import {
+  Home,
+  About,
+  Contact,
+  Resources,
+  Members,
+  Member,
+  Hackathon,
+} from "./pages";
 
 const PageLayout = () => {
   return (
@@ -31,6 +39,7 @@ const router = createBrowserRouter(
       <Route path="/resources" element={<Resources />} />
       <Route path="/members" element={<Members />} />
       <Route path="/members/:name" element={<Member />} />
+      <Route path="/hackathon" element={<Hackathon />} />
     </Route>,
   ),
 );

@@ -2,6 +2,7 @@
   "name": "obiesource_website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "start": "npm run dev",
@@ -18,16 +19,17 @@
     "react-type-animation": "^3.1.0"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "ajv-cli": "^5.0.0",
+    "@mdx-js/rollup": "^3.0.1",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "ajv-cli": "^5.0.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "typescript-plugin-css-modules": "^5.0.2",
     "vite": "^4.4.5"
