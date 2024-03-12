@@ -15,6 +15,10 @@
   text-align: center;
 }
 
+.hackathon .title {
+  font-size: 30px;
+}
+
 .hackathon .title p {
   margin-top: 0;
 }
@@ -26,4 +30,119 @@
 
 .hackathon li:not(:last-child) {
   margin-bottom: 0.2rem;
+}
+
+.obs__hackathon-devpost {
+  margin-top: 2rem;
+  font-size: 45px;
+}
+
+
+.obs__hackathon-intro {
+  background-color: var(--color-background);
+  /* width: 100%; */
+  padding: 0rem 6rem 6rem 6rem;
+}
+
+.obs__hackathon-intro-terminal {
+  background-color: var(--color-foreground);
+  /* width: 100%; */
+  border-radius: 10px;
+  box-sizing: border-box;
+  /* justify-content: space-between; */
+}
+
+.obs__hackathon-intro-terminal-buttons__container {
+  background-color: var(--color-foreground-2);
+  /* width: 100%; */
+  padding: 0.5rem 1rem;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  /* justify-content: space-between; */
+}
+
+.obs__hackathon-intro-terminal-body {
+  padding: 2rem 1.8rem;
+}
+.obs__hackathon-intro-terminal-buttons {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  margin-right: 0.7rem;
+
+  &.red {
+    background: #ff6057;
+    border: 1px solid #e14640;
+  }
+
+  &.amber {
+    background: #ffbd2e;
+    border: 1px solid #dfa123;
+  }
+
+  &.green {
+    background: #27c93f;
+    border: 1px solid #1dad2b;
+  }
+}
+
+.obs__hackathon-intro-heading {
+  font-family: var(--font-display);
+  font-weight: 250;
+  font-size: 92px;
+  color: var(--color-txt);
+}
+
+.obs__hackathon-intro-description__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.obs__hackathon-intro-description-buls {
+  /* margin: 1.3rem 0 0 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* width: 100%; */
+  gap: 0.5rem;
+}
+
+.obs__hackathon-intro-description {
+  min-width: 13rem;
+  border-radius: 10px;
+  /* width: 100%; */
+}
+
+.obs__hackathon-intro-description h3 {
+  font-family: var(--font-text-1);
+  font-weight: 500;
+  font-size: 30px;
+  padding: 0 0 0.6rem 0;
+  color: var(--color-accent);
+}
+
+.obs__hackathon-intro-description p {
+  font-family: var(--font-text-1);
+  font-size: 16px;
+  color: var(--color-txt);
+}
+
+@media screen and (max-width: 700px) {
+  .obs__hackathon-intro-heading {
+    font-size: 35px;
+  }
+  .obs__hackathon-intro-description h3 {
+    font-size: 20px;
+  }
+  .obs__hackathon-intro {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .obs__hackathon-intro {
+    padding: 2rem;
+  }
 }

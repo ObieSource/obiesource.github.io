@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "./introduction.css";
 
-const Typewriter = ({
+export const Typewriter = ({
   text,
   showIf = true,
   sequenceBefore = [],
@@ -16,7 +16,7 @@ const Typewriter = ({
   return (
     <span style={{ whiteSpace: "pre-wrap" }}>
       <span style={{ position: "absolute" }}>
-        {showIf && !shouldHideCursor && (
+        {showIf && !shouldHideCursor &&(
           <TypeAnimation
             sequence={[
               ...sequenceBefore,

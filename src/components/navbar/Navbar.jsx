@@ -9,6 +9,9 @@ const Navbar = () => {
   const links = (
     <>
       <p>
+        <Link to="/hackathon">Hackathon 2024!</Link>
+      </p>
+      <p>
         <Link to="/about">About</Link>
       </p>
       <p>
