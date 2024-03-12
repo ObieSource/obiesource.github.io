@@ -16,7 +16,7 @@ export const Typewriter = ({
   return (
     <span style={{ whiteSpace: "pre-wrap" }}>
       <span style={{ position: "absolute" }}>
-        {showIf && !shouldHideCursor &&(
+        {showIf && !shouldHideCursor && (
           <TypeAnimation
             sequence={[
               ...sequenceBefore,
