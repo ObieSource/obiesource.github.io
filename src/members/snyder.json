@@ -3,6 +3,14 @@
   "name": "Ben Snyder",
   "pronouns": "he/him",
   "class": "'25",
-  "socials": ["https://www.instagram.com/bensnydoor"],
-  "bio": "I'm a 2nd year CS major"
+  "socials": ["https://www.instagram.com/bensnydeer/"],
+  "bio": "Hi, I'm Ben Snyder! I'm a 3rd year CS major and Math minor. I like creating music and also recently have been doing some paper/cardboard art. Also a big command line utility fan",
+  "projects": [
+    {
+      "name": "GitHub",
+      "description": "Here is my content",
+      "website": "https://github.com/bsnyder2"
+    }
+  ]
 }
+
