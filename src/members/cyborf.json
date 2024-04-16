@@ -1,0 +1,9 @@
+{
+    "$schema": "../member.schema.json",
+    "name": "Dan-Ha Le",
+    "status": "officer",
+    "pronouns": "she/they",
+    "class": "'25",
+    "socials": ["https://cyborf.github.io/"],
+    "bio": " Computer Science and Politics. Proud Writing Associate and Cat in the Cream Manager. Doer of all things that need doing ᕙ(  •̀ ᗜ •́  )ᕗ"
+  }
